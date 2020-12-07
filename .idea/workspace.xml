@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d7ad72a9-e476-4985-906e-64b81963ff49" name="Default Changelist" comment="Initial Commit" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1lFPQANn9pvmwlqOuHlQHro3C5C" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ResourceManagerPrefKey.ResourceType" value="DRAWABLE" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$PROJECT_DIR$/../../Android/Sdk" />
+    <property name="ignore.virus.scanning.warn.message" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\AppData\React Projects\RiinvestProject\pngs" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Jon\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d7ad72a9-e476-4985-906e-64b81963ff49" name="Default Changelist" comment="" />
+      <created>1607189846784</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607189846784</updated>
+      <workItem from="1607192147525" duration="1179000" />
+      <workItem from="1607196594774" duration="32958000" />
+      <workItem from="1607346768199" duration="1188000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1607286947351</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607286947351</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="479" y="261" key="#ESLint" timestamp="1607347058304">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="479" y="261" key="#ESLint/0.0.1360.728@0.0.1360.728" timestamp="1607347058304" />
+    <state x="183" y="53" key="#Inspections" timestamp="1607260093657">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="183" y="53" key="#Inspections/0.0.1360.728@0.0.1360.728" timestamp="1607260093657" />
+    <state x="466" y="214" key="#Notifications" timestamp="1607346337107">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="466" y="214" key="#Notifications/0.0.1360.728@0.0.1360.728" timestamp="1607346337107" />
+    <state x="138" y="11" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607194389356">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="138" y="11" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1360.728@0.0.1360.728" timestamp="1607194389356" />
+    <state x="434" y="156" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607196002086">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="434" y="156" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1360.728@0.0.1360.728" timestamp="1607196002086" />
+    <state x="410" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607260052787">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="410" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1360.728@0.0.1360.728" timestamp="1607260052787" />
+    <state x="30" y="109" width="1125" height="488" key="AVDManager" timestamp="1607195127315">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="30" y="109" width="1125" height="488" key="AVDManager/0.0.1360.728@0.0.1360.728" timestamp="1607195127315" />
+    <state x="252" y="109" key="AndroidCreateResourceFileDialog" timestamp="1607195476773">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="252" y="109" key="AndroidCreateResourceFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1607195476773" />
+    <state x="464" y="111" key="FileChooserDialogImpl" timestamp="1607344577957">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="464" y="111" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1607344577957" />
+    <state x="496" y="256" key="Github.CreateGistDialog" timestamp="1607195962129">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="496" y="256" key="Github.CreateGistDialog/0.0.1360.728@0.0.1360.728" timestamp="1607195962129" />
+    <state x="185" y="0" key="SettingsEditor" timestamp="1607347859894">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="185" y="0" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1607347859894" />
+    <state x="344" y="55" key="VCS.ChangeListViewerDialog" timestamp="1607346414418">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="344" y="55" key="VCS.ChangeListViewerDialog/0.0.1360.728@0.0.1360.728" timestamp="1607346414418" />
+    <state x="173" y="84" key="Vcs.Push.Dialog.v2" timestamp="1607286957215">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="173" y="84" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1607286957215" />
+    <state x="390" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607346323401">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="390" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1360.728@0.0.1360.728" timestamp="1607346323401" />
+    <state x="362" y="212" key="git4idea.rebase.GitRebaseDialog" timestamp="1607346416212">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="362" y="212" key="git4idea.rebase.GitRebaseDialog/0.0.1360.728@0.0.1360.728" timestamp="1607346416212" />
+    <state x="382" y="257" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1607346435471">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="382" y="257" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1360.728@0.0.1360.728" timestamp="1607346435471" />
+    <state x="172" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607272459237">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="172" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1607272459237" />
+    <state x="370" y="37" width="465" height="628" key="svn.repositoryBrowser" timestamp="1607345321001">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="370" y="37" width="465" height="628" key="svn.repositoryBrowser/0.0.1360.728@0.0.1360.728" timestamp="1607345321001" />
+  </component>
+</project>

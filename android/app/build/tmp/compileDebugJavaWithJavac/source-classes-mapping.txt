@@ -1,0 +1,14 @@
+com/riinvestproject/BuildConfig.java
+ com.riinvestproject.BuildConfig
+com/riinvestproject/MainActivity.java
+ com.riinvestproject.MainActivity
+com/riinvestproject/ReactNativeFlipper.java
+ com.riinvestproject.ReactNativeFlipper
+ com.riinvestproject.ReactNativeFlipper$1
+ com.riinvestproject.ReactNativeFlipper$2
+ com.riinvestproject.ReactNativeFlipper$2$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
+com/riinvestproject/MainApplication.java
+ com.riinvestproject.MainApplication
+ com.riinvestproject.MainApplication$1
