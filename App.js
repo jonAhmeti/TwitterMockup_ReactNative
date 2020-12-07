@@ -1,45 +1,28 @@
-import React, {useState} from 'react';
-import {View, StyleSheet} from 'react-native';
-import Header from './components/Login/Header';
-import AccountChoice from './components/Login/AccountChoice';
+import * as React from 'react';
+import {View, Text} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import Main from './components/Login/Main';
 
-const App = () => {
-  const headerText = 'See what’s happening in the world right now';
-  const buttonsText = 'Join Twitter today.';
-
+function bruh() {
   return (
-    <View style={styles.body}>
-      <View style={styles.headerWrapper}>
-        <Header text={headerText} />
-      </View>
-
-      <View style={styles.main}>
-        <AccountChoice text={buttonsText} />
-      </View>
+    <View>
+      <Text>BRUHHH PAGE</Text>
     </View>
   );
-};
+}
 
-// React Native Styles
-const styles = StyleSheet.create({
-  body: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#15202b',
-    color: '#ffffff',
-  },
+const Stack = createStackNavigator();
 
-  headerWrapper: {
-    flex: 1,
-    justifyContent: 'center',
-    alignSelf: 'stretch',
-  },
-  main: {
-    flex: 1,
-    flexDirection: 'column',
-    alignSelf: 'stretch',
-  },
-});
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator headerMode={'none'}>
+        <Stack.Screen name="Main" component={Main} />
+        <Stack.Screen name="signUp" component={bruh} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 
 export default App;

@@ -7,7 +7,11 @@ const AccountChoice = (props) => {
       <Text style={styles.topText}>{props.text}</Text>
       <View style={styles.buttonsWrapper}>
         <TouchableHighlight style={[styles.buttons, styles.buttonSignUp]}>
-          <Text style={[styles.buttonText, styles.signUpText]}>Sign Up</Text>
+          <Text
+            style={[styles.buttonText, styles.signUpText]}
+            onPress={() => props.navigation.navigate('signUp')}>
+            Sign Up
+          </Text>
         </TouchableHighlight>
         <TouchableHighlight style={[styles.buttons, styles.buttonLogin]}>
           <Text style={[styles.buttonText, styles.loginText]}>Login</Text>
