@@ -12,11 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d7ad72a9-e476-4985-906e-64b81963ff49" name="Default Changelist" comment="Initial Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Login/AccountChoice.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Login/AccountChoice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Login/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Login/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +40,6 @@
     <property name="ResourceManagerPrefKey.ResourceType" value="DRAWABLE" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../Android/Sdk" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
@@ -77,7 +73,9 @@
       <updated>1607189846784</updated>
       <workItem from="1607192147525" duration="1179000" />
       <workItem from="1607196594774" duration="32958000" />
-      <workItem from="1607346768199" duration="4239000" />
+      <workItem from="1607346768199" duration="4825000" />
+      <workItem from="1607351608221" duration="131000" />
+      <workItem from="1607351792241" duration="21000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1607286947351</created>

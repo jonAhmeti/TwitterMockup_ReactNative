@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, TouchableHighlight, StyleSheet, Image} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import Header from './components/Login/Header';
 import AccountChoice from './components/Login/AccountChoice';
 
