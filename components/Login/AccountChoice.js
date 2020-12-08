@@ -6,19 +6,23 @@ const AccountChoice = (props) => {
     <View style={styles.container}>
       <Text style={styles.topText}>{props.text}</Text>
       <View style={styles.buttonsWrapper}>
-        <TouchableHighlight style={[styles.buttons, styles.buttonSignUp]}>
-          <Text
-            style={[styles.buttonText, styles.signUpText]}
-            onPress={() => props.navigation.navigate('signUp')}>
-            Sign Up
-          </Text>
+        <TouchableHighlight
+          activeOpacity={0.75}
+          underlayColor={'#fff'}
+          onPress={() => props.navigation.navigate('signUp')}
+          style={[styles.sizeBorder, styles.touchableWrapper]}>
+          <View style={[styles.sizeBorder, styles.button, styles.buttonSignUp]}>
+            <Text style={[styles.textBold, styles.signUpText]}>Sign Up</Text>
+          </View>
         </TouchableHighlight>
-        <TouchableHighlight style={[styles.buttons, styles.buttonLogin]}>
-          <Text
-            style={[styles.buttonText, styles.loginText]}
-            onPress={() => props.navigation.navigate('login')}>
-            Login
-          </Text>
+        <TouchableHighlight
+          activeOpacity={0.75}
+          underlayColor={'#fff'}
+          onPress={() => props.navigation.navigate('login')}
+          style={[styles.sizeBorder, styles.touchableWrapper]}>
+          <View style={[styles.sizeBorder, styles.button, styles.buttonLogin]}>
+            <Text style={[styles.textBold, styles.loginText]}>Login</Text>
+          </View>
         </TouchableHighlight>
       </View>
     </View>
@@ -38,16 +42,20 @@ const styles = StyleSheet.create({
   buttonsWrapper: {
     alignItems: 'center',
   },
-  buttons: {
-    borderWidth: 2,
-    borderColor: '#5dbced',
+  sizeBorder: {
+    borderRadius: 60,
     height: 50,
     width: 250,
-    borderRadius: 60,
-    alignItems: 'center',
-    justifyContent: 'center',
+  },
+  touchableWrapper: {
     marginTop: 10,
     marginBottom: 10,
+  },
+  button: {
+    borderWidth: 2,
+    borderColor: '#5dbced',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   buttonSignUp: {
     backgroundColor: '#5dbced',
@@ -55,7 +63,7 @@ const styles = StyleSheet.create({
   buttonLogin: {
     backgroundColor: '#15202b',
   },
-  buttonText: {
+  textBold: {
     fontWeight: 'bold',
   },
   signUpText: {
