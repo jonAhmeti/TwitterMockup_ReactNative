@@ -8,6 +8,7 @@ MERGED from D:\AppData\React Projects\RiinvestProject\android\app\src\main\Andro
 MERGED from [com.facebook.flipper:flipper:0.54.0] C:\Users\Jon\.gradle\caches\transforms-2\files-2.1\d202ba8bc8961450333bf473e6298c94\jetified-flipper-0.54.0\AndroidManifest.xml:8:1-18:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] C:\Users\Jon\.gradle\caches\transforms-2\files-2.1\4702e8cbe5c66b644ed2f56d7cf1ab9a\jetified-flipper-network-plugin-0.54.0\AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] C:\Users\Jon\.gradle\caches\transforms-2\files-2.1\7c077107cba6636db2ecf683d1903857\jetified-flipper-fresco-plugin-0.54.0\AndroidManifest.xml:8:1-15:12
+MERGED from [:react-native-community_datetimepicker] D:\AppData\React Projects\RiinvestProject\node_modules\@react-native-community\datetimepicker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-13:12
 MERGED from [:react-native-community_masked-view] D:\AppData\React Projects\RiinvestProject\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-gesture-handler] D:\AppData\React Projects\RiinvestProject\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-reanimated] D:\AppData\React Projects\RiinvestProject\node_modules\react-native-reanimated\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
@@ -91,6 +92,8 @@ application
 ADDED from D:\AppData\React Projects\RiinvestProject\android\app\src\main\AndroidManifest.xml:6:5-25:19
 MERGED from D:\AppData\React Projects\RiinvestProject\android\app\src\main\AndroidManifest.xml:6:5-25:19
 MERGED from D:\AppData\React Projects\RiinvestProject\android\app\src\main\AndroidManifest.xml:6:5-25:19
+MERGED from [:react-native-community_datetimepicker] D:\AppData\React Projects\RiinvestProject\node_modules\@react-native-community\datetimepicker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-20
+MERGED from [:react-native-community_datetimepicker] D:\AppData\React Projects\RiinvestProject\node_modules\@react-native-community\datetimepicker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.react:react-native:0.63.4] C:\Users\Jon\.gradle\caches\transforms-2\files-2.1\b222f8799aeaf8170c0343761dd77749\jetified-react-native-0.63.4\AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.react:react-native:0.63.4] C:\Users\Jon\.gradle\caches\transforms-2\files-2.1\b222f8799aeaf8170c0343761dd77749\jetified-react-native-0.63.4\AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.9.0] C:\Users\Jon\.gradle\caches\transforms-2\files-2.1\3ff5f325f0418d9356e2ddf4c121b33c\jetified-soloader-0.9.0\AndroidManifest.xml:11:5-20
@@ -163,6 +166,8 @@ MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] C:\Users\Jon\.g
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.54.0] C:\Users\Jon\.gradle\caches\transforms-2\files-2.1\4702e8cbe5c66b644ed2f56d7cf1ab9a\jetified-flipper-network-plugin-0.54.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] C:\Users\Jon\.gradle\caches\transforms-2\files-2.1\7c077107cba6636db2ecf683d1903857\jetified-flipper-fresco-plugin-0.54.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.54.0] C:\Users\Jon\.gradle\caches\transforms-2\files-2.1\7c077107cba6636db2ecf683d1903857\jetified-flipper-fresco-plugin-0.54.0\AndroidManifest.xml:11:5-13:41
+MERGED from [:react-native-community_datetimepicker] D:\AppData\React Projects\RiinvestProject\node_modules\@react-native-community\datetimepicker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-community_datetimepicker] D:\AppData\React Projects\RiinvestProject\node_modules\@react-native-community\datetimepicker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-community_masked-view] D:\AppData\React Projects\RiinvestProject\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] D:\AppData\React Projects\RiinvestProject\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] D:\AppData\React Projects\RiinvestProject\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41

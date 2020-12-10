@@ -16,10 +16,36 @@
       <change beforePath="$PROJECT_DIR$/android/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Login/AccountChoice.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Login/AccountChoice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SignUp/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/SignUp/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/rncli/src/main/java/com/facebook/react/PackageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/rncli/src/main/java/com/facebook/react/PackageList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/javac/debug/classes/com/facebook/react/PackageList.class" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/javac/debug/classes/com/facebook/react/PackageList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/project_dex_archive/debug/out/0de047b78604ace30fe8fee925535dc9e130ce335b7ff21bd107697a7ba469c2_0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/project_dex_archive/debug/out/0de047b78604ace30fe8fee925535dc9e130ce335b7ff21bd107697a7ba469c2_1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/project_dex_archive/debug/out/0de047b78604ace30fe8fee925535dc9e130ce335b7ff21bd107697a7ba469c2_2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/project_dex_archive/debug/out/0de047b78604ace30fe8fee925535dc9e130ce335b7ff21bd107697a7ba469c2_3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/project_dex_archive/debug/out/0de047b78604ace30fe8fee925535dc9e130ce335b7ff21bd107697a7ba469c2_4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/project_dex_archive/debug/out/0de047b78604ace30fe8fee925535dc9e130ce335b7ff21bd107697a7ba469c2_5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/project_dex_archive/debug/out/com/facebook/react/PackageList.dex" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/project_dex_archive/debug/out/com/facebook/react/PackageList.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SignUp/Inputs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/SignUp/Inputs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +128,8 @@
       <workItem from="1607196594774" duration="32958000" />
       <workItem from="1607346768199" duration="4825000" />
       <workItem from="1607351608221" duration="131000" />
-      <workItem from="1607351792241" duration="24917000" />
+      <workItem from="1607351792241" duration="26270000" />
+      <workItem from="1607626771555" duration="12848000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1607286947351</created>
@@ -149,14 +176,14 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="466" y="214" width="450" height="274" key="#Notifications/0.0.1360.728@0.0.1360.728" timestamp="1607433167393" />
-    <state x="487" y="145" key="#Web_Browsers" timestamp="1607372111760">
+    <state x="487" y="145" key="#Web_Browsers" timestamp="1607633370462">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="487" y="145" key="#Web_Browsers/0.0.1360.728@0.0.1360.728" timestamp="1607372111760" />
-    <state x="138" y="11" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607372113854">
+    <state x="487" y="145" key="#Web_Browsers/0.0.1360.728@0.0.1360.728" timestamp="1607633370462" />
+    <state x="138" y="11" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607633390953">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="138" y="11" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1360.728@0.0.1360.728" timestamp="1607372113854" />
+    <state x="138" y="11" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1360.728@0.0.1360.728" timestamp="1607633390953" />
     <state x="434" y="156" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607353330678">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -173,70 +200,70 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="252" y="109" key="AndroidCreateResourceFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1607195476773" />
-    <state width="755" height="466" key="DebuggerActiveHint" timestamp="1607373512446">
+    <state width="755" height="466" key="DebuggerActiveHint" timestamp="1607636226866">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="755" height="466" key="DebuggerActiveHint/0.0.1360.728@0.0.1360.728" timestamp="1607373512446" />
-    <state x="551" y="106" key="EnvironmentVariablesDialog" timestamp="1607370067736">
+    <state width="755" height="466" key="DebuggerActiveHint/0.0.1360.728@0.0.1360.728" timestamp="1607636226866" />
+    <state x="551" y="106" width="560" height="499" key="EnvironmentVariablesDialog" timestamp="1607633386169">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="551" y="106" key="EnvironmentVariablesDialog/0.0.1360.728@0.0.1360.728" timestamp="1607370067736" />
-    <state x="464" y="111" key="FileChooserDialogImpl" timestamp="1607344577957">
+    <state x="551" y="106" width="560" height="499" key="EnvironmentVariablesDialog/0.0.1360.728@0.0.1360.728" timestamp="1607633386169" />
+    <state x="464" y="111" key="FileChooserDialogImpl" timestamp="1607444237748">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="464" y="111" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1607344577957" />
+    <state x="464" y="111" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1607444237748" />
     <state x="496" y="256" key="Github.CreateGistDialog" timestamp="1607195962129">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="496" y="256" key="Github.CreateGistDialog/0.0.1360.728@0.0.1360.728" timestamp="1607195962129" />
-    <state width="1078" height="178" key="GridCell.Tab.0.bottom" timestamp="1607432188113">
+    <state width="1339" height="203" key="GridCell.Tab.0.bottom" timestamp="1607640639744">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="178" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1607432188113" />
-    <state width="1078" height="178" key="GridCell.Tab.0.center" timestamp="1607432188113">
+    <state width="1339" height="203" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1607640639744" />
+    <state width="1339" height="203" key="GridCell.Tab.0.center" timestamp="1607640639744">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="178" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1607432188113" />
-    <state width="1078" height="178" key="GridCell.Tab.0.left" timestamp="1607432188113">
+    <state width="1339" height="203" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1607640639744" />
+    <state width="1339" height="203" key="GridCell.Tab.0.left" timestamp="1607640639744">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="178" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1607432188113" />
-    <state width="1078" height="178" key="GridCell.Tab.0.right" timestamp="1607432188113">
+    <state width="1339" height="203" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1607640639744" />
+    <state width="1339" height="203" key="GridCell.Tab.0.right" timestamp="1607640639744">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="178" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1607432188113" />
-    <state width="1078" height="203" key="GridCell.Tab.1.bottom" timestamp="1607432086165">
+    <state width="1339" height="203" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1607640639744" />
+    <state width="1339" height="203" key="GridCell.Tab.1.bottom" timestamp="1607640639744">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="203" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1607432086165" />
-    <state width="1078" height="203" key="GridCell.Tab.1.center" timestamp="1607432086165">
+    <state width="1339" height="203" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1607640639744" />
+    <state width="1339" height="203" key="GridCell.Tab.1.center" timestamp="1607640639744">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="203" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1607432086165" />
-    <state width="1078" height="203" key="GridCell.Tab.1.left" timestamp="1607432086165">
+    <state width="1339" height="203" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1607640639744" />
+    <state width="1339" height="203" key="GridCell.Tab.1.left" timestamp="1607640639744">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="203" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1607432086165" />
-    <state width="1078" height="203" key="GridCell.Tab.1.right" timestamp="1607432086165">
+    <state width="1339" height="203" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1607640639744" />
+    <state width="1339" height="203" key="GridCell.Tab.1.right" timestamp="1607640639744">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="203" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1607432086165" />
-    <state width="1078" height="203" key="GridCell.Tab.2.bottom" timestamp="1607432086165">
+    <state width="1339" height="203" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1607640639744" />
+    <state width="1339" height="203" key="GridCell.Tab.2.bottom" timestamp="1607640639744">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="203" key="GridCell.Tab.2.bottom/0.0.1360.728@0.0.1360.728" timestamp="1607432086165" />
-    <state width="1078" height="203" key="GridCell.Tab.2.center" timestamp="1607432086165">
+    <state width="1339" height="203" key="GridCell.Tab.2.bottom/0.0.1360.728@0.0.1360.728" timestamp="1607640639744" />
+    <state width="1339" height="203" key="GridCell.Tab.2.center" timestamp="1607640639744">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="203" key="GridCell.Tab.2.center/0.0.1360.728@0.0.1360.728" timestamp="1607432086165" />
-    <state width="1078" height="203" key="GridCell.Tab.2.left" timestamp="1607432086165">
+    <state width="1339" height="203" key="GridCell.Tab.2.center/0.0.1360.728@0.0.1360.728" timestamp="1607640639744" />
+    <state width="1339" height="203" key="GridCell.Tab.2.left" timestamp="1607640639744">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="203" key="GridCell.Tab.2.left/0.0.1360.728@0.0.1360.728" timestamp="1607432086165" />
-    <state width="1078" height="203" key="GridCell.Tab.2.right" timestamp="1607432086165">
+    <state width="1339" height="203" key="GridCell.Tab.2.left/0.0.1360.728@0.0.1360.728" timestamp="1607640639744" />
+    <state width="1339" height="203" key="GridCell.Tab.2.right" timestamp="1607640639744">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="203" key="GridCell.Tab.2.right/0.0.1360.728@0.0.1360.728" timestamp="1607432086165" />
+    <state width="1339" height="203" key="GridCell.Tab.2.right/0.0.1360.728@0.0.1360.728" timestamp="1607640639744" />
     <state x="185" y="0" key="SettingsEditor" timestamp="1607370888574">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -269,5 +296,12 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="370" y="37" width="465" height="628" key="svn.repositoryBrowser/0.0.1360.728@0.0.1360.728" timestamp="1607345321001" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="ReactNative">
+        <watch expression="showDob" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

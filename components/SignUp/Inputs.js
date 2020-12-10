@@ -1,28 +1,67 @@
 import React, {useState} from 'react';
-import {
-  Text,
-  TextInput,
-  TouchableHighlight,
-  View,
-  StyleSheet,
-} from 'react-native';
+import {Text, TextInput, Pressable, View, StyleSheet} from 'react-native';
+import RNDateTimePicker from '@react-native-community/datetimepicker';
 
 const Inputs = () => {
+  const [showDob, setShowDob] = useState(false);
+  const [dob, setDob] = useState(undefined);
+
+  function onDatePick(event, date) {
+    if (date instanceof Date) {
+      setDob([date, '#ffffff']);
+      console.log('Set showDob to false');
+      setShowDob(false);
+    }
+  }
+
+  function dobValue(altValue) {
+    if (dob) {
+      return `${dob[0].toDateString()}`;
+    } else {
+      return altValue;
+    }
+  }
+
   return (
     <View>
       <View style={styles.inputWrapper}>
-        <Text style={styles.inputLabel}>Username:</Text>
+        <Text style={styles.inputLabel}>Name:</Text>
         <TextInput style={styles.inputText} />
       </View>
       <View style={styles.inputWrapper}>
-        <Text style={styles.inputLabel}>Password:</Text>
+        <Text style={styles.inputLabel}>Email:</Text>
         <TextInput style={styles.inputText} />
+      </View>
+      <Pressable
+        onPressIn={() => {
+          console.log('Set showDob to true');
+          setShowDob(true);
+        }}
+        style={[styles.inputWrapper, styles.dobWrapper]}>
+        <Text style={styles.inputLabel}>Date of birth:</Text>
+        <TextInput
+          style={[styles.inputText, {color: 'black'}]}
+          value={dobValue('Tap to select')}
+          editable={false}
+        />
+      </Pressable>
+      <View>
+        {showDob && (
+          <RNDateTimePicker
+            value={new Date(0)}
+            mode={'date'}
+            onChange={onDatePick}
+          />
+        )}
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  dobWrapper: {
+    height: 50,
+  },
   inputWrapper: {
     backgroundColor: '#192734',
     borderBottomWidth: 1,
