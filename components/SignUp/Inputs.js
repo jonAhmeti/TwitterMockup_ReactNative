@@ -1,37 +1,54 @@
 import React, {useState} from 'react';
-import {Text, TextInput, Pressable, View, StyleSheet} from 'react-native';
+import {
+  Text,
+  TextInput,
+  Pressable,
+  View,
+  StyleSheet,
+  TouchableHighlight,
+} from 'react-native';
 import RNDateTimePicker from '@react-native-community/datetimepicker';
 
 const Inputs = () => {
   const [showDob, setShowDob] = useState(false);
   const [dob, setDob] = useState(undefined);
 
+  function todaysDate() {
+    let today = new Date();
+    today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+    return today;
+  }
+
   function onDatePick(event, date) {
     if (date instanceof Date) {
-      setDob([date, '#ffffff']);
+      setDob(date);
       console.log('Set showDob to false');
-      setShowDob(false);
     }
+    setShowDob(false);
   }
 
   function dobValue(altValue) {
     if (dob) {
-      return `${dob[0].toDateString()}`;
+      return `${dob.toDateString()}`;
     } else {
       return altValue;
     }
   }
+  function dobColor() {
+    return dob ? '#fff' : '#5dbced';
+  }
 
   return (
-    <View>
+    <View style={styles.container}>
       <View style={styles.inputWrapper}>
         <Text style={styles.inputLabel}>Name:</Text>
-        <TextInput style={styles.inputText} />
+        <TextInput
+          style={styles.inputText}
+          autoCapitalize={'words'}
+          maxLength={50}
+        />
       </View>
-      <View style={styles.inputWrapper}>
-        <Text style={styles.inputLabel}>Email:</Text>
-        <TextInput style={styles.inputText} />
-      </View>
+
       <Pressable
         onPressIn={() => {
           console.log('Set showDob to true');
@@ -40,25 +57,67 @@ const Inputs = () => {
         style={[styles.inputWrapper, styles.dobWrapper]}>
         <Text style={styles.inputLabel}>Date of birth:</Text>
         <TextInput
-          style={[styles.inputText, {color: 'black'}]}
+          style={[styles.inputText, {color: dobColor()}]}
           value={dobValue('Tap to select')}
           editable={false}
         />
       </Pressable>
-      <View>
-        {showDob && (
-          <RNDateTimePicker
-            value={new Date(0)}
-            mode={'date'}
-            onChange={onDatePick}
-          />
-        )}
+      {showDob && (
+        <RNDateTimePicker
+          value={new Date(0)}
+          mode={'date'}
+          onChange={onDatePick}
+          display={'spinner'}
+          minimumDate={new Date(1950, 0, 1)}
+          maximumDate={todaysDate()}
+          style={{backgroundColor: 'red'}}
+        />
+      )}
+
+      <View style={styles.inputWrapper}>
+        <Text style={styles.inputLabel}>Email:</Text>
+        <TextInput style={styles.inputText} keyboardType={'email-address'} />
+      </View>
+      <View style={styles.inputWrapper}>
+        <Text style={styles.inputLabel}>Password:</Text>
+        <TextInput style={styles.inputText} secureTextEntry={true} />
+      </View>
+
+      <View style={styles.nextWrapper}>
+        <TouchableHighlight
+          activeOpacity={0.75}
+          underlayColor={'#fff'}
+          style={styles.nextShape}
+          onPress={() => {}}>
+          <View style={[styles.nextShape, styles.button]}>
+            <Text style={{fontWeight: 'bold', color: '#fff'}}>Next</Text>
+          </View>
+        </TouchableHighlight>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    alignSelf: 'stretch',
+    alignItems: 'center',
+  },
+  nextWrapper: {
+    marginTop: 50,
+    width: 250,
+  },
+  button: {
+    borderWidth: 2,
+    borderColor: '#5dbced',
+    backgroundColor: '#5dbced',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  nextShape: {
+    borderRadius: 60,
+    height: 50,
+  },
   dobWrapper: {
     height: 50,
   },
@@ -70,8 +129,8 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingRight: 20,
     width: 250,
-    marginTop: 10,
-    marginBottom: 10,
+    marginTop: 20,
+    marginBottom: 20,
   },
   touchWrapper: {
     borderRadius: 60,
