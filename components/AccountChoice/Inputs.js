@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
-import TwitterButton from '../buttons/TwitterButton';
+import TwitterButton from '../defaults/TwitterButton';
 
 const Inputs = (props) => {
   return (

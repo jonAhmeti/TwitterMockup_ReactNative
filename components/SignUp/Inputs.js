@@ -1,10 +1,7 @@
 import React, {useState} from 'react';
 import {Text, TextInput, Pressable, View, StyleSheet} from 'react-native';
 import RNDateTimePicker from '@react-native-community/datetimepicker';
-import TwitterButton, {
-  ButtonClass,
-  buttonClass,
-} from '../buttons/TwitterButton';
+import TwitterButton from '../defaults/TwitterButton';
 
 const Inputs = () => {
   const [showDob, setShowDob] = useState(false);
@@ -37,6 +34,7 @@ const Inputs = () => {
 
   return (
     <View style={styles.container}>
+
       <View style={styles.inputWrapper}>
         <Text style={styles.inputLabel}>Name:</Text>
         <TextInput
@@ -84,8 +82,6 @@ const Inputs = () => {
         <TwitterButton
           theme={'light'}
           text={'Next'}
-          onPress={() => {
-            console.log('Next Button Tapped (Not Implemented)');}}
         />
       </View>
     </View>
