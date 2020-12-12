@@ -5,7 +5,7 @@ import Inputs from './Inputs';
 
 const Main = () => {
   return (
-    <View style={styles.body}>
+    <View style={styles.container}>
       <Header />
       <View style={styles.inputsView}>
         <Inputs />
@@ -16,7 +16,7 @@ const Main = () => {
 
 // React Native Styles
 const styles = StyleSheet.create({
-  body: {
+  container: {
     flex: 1,
     alignItems: 'center',
     backgroundColor: '#15202b',

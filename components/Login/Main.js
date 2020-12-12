@@ -1,9 +1,14 @@
-import React from 'react';
-import {View, StyleSheet, ScrollView} from 'react-native';
+import React, {useState} from 'react';
+import {View, StyleSheet, ScrollView, Text, Pressable} from 'react-native';
 import Header from './Header';
 import Inputs from './Inputs';
 
 const Main = () => {
+  const [stylePressed, setStylePressed] = useState(undefined);
+  let forgotPressedStyle = {
+    color: '#5dbced',
+  };
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
@@ -12,10 +17,21 @@ const Main = () => {
       <View style={styles.inputsWrapper}>
         <Inputs />
       </View>
+      <Pressable
+        onPressIn={() => {
+          setStylePressed(forgotPressedStyle);
+        }}
+        onPressOut={() => {
+          setStylePressed(undefined);
+        }}
+        style={styles.forgotPasswordWrapper}>
+        <Text style={[styles.forgotPassword, stylePressed]}>
+          Forgot password?
+        </Text>
+      </Pressable>
     </ScrollView>
   );
 };
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -27,6 +43,13 @@ const styles = StyleSheet.create({
   },
   inputsWrapper: {
     alignItems: 'center',
+  },
+  forgotPassword: {
+    color: '#fff',
+  },
+  forgotPasswordWrapper: {
+    marginTop: 60,
+    alignSelf: 'center',
   },
 });
 
