@@ -1,13 +1,10 @@
 import React, {useState} from 'react';
-import {
-  Text,
-  TextInput,
-  Pressable,
-  View,
-  StyleSheet,
-  TouchableHighlight,
-} from 'react-native';
+import {Text, TextInput, Pressable, View, StyleSheet} from 'react-native';
 import RNDateTimePicker from '@react-native-community/datetimepicker';
+import TwitterButton, {
+  ButtonClass,
+  buttonClass,
+} from '../buttons/TwitterButton';
 
 const Inputs = () => {
   const [showDob, setShowDob] = useState(false);
@@ -22,9 +19,9 @@ const Inputs = () => {
   function onDatePick(event, date) {
     if (date instanceof Date) {
       setDob(date);
-      console.log('Set showDob to false');
     }
     setShowDob(false);
+    console.log('Date of birth picker closed');
   }
 
   function dobValue(altValue) {
@@ -51,8 +48,8 @@ const Inputs = () => {
 
       <Pressable
         onPressIn={() => {
-          console.log('Set showDob to true');
           setShowDob(true);
+          console.log('Date of birth picker opened');
         }}
         style={[styles.inputWrapper, styles.dobWrapper]}>
         <Text style={styles.inputLabel}>Date of birth:</Text>
@@ -84,15 +81,11 @@ const Inputs = () => {
       </View>
 
       <View style={styles.nextWrapper}>
-        <TouchableHighlight
-          activeOpacity={0.75}
-          underlayColor={'#fff'}
-          style={styles.nextShape}
-          onPress={() => {}}>
-          <View style={[styles.nextShape, styles.button]}>
-            <Text style={{fontWeight: 'bold', color: '#fff'}}>Next</Text>
-          </View>
-        </TouchableHighlight>
+        <TwitterButton
+          theme={'light'}
+          text={'Next'}
+          onPress={() => console.log('Next Button Tapped')}
+        />
       </View>
     </View>
   );

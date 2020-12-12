@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import Header from '../Login/Header';
-import AccountChoice from '../Login/AccountChoice';
+import Header from './Header';
+import Inputs from './Inputs';
 
 const Main = ({navigation}) => {
   const headerText = 'See what’s happening in the world right now';
@@ -14,7 +14,7 @@ const Main = ({navigation}) => {
       </View>
 
       <View style={styles.main}>
-        <AccountChoice navigation={navigation} text={buttonsText} />
+        <Inputs navigation={navigation} text={buttonsText} />
       </View>
     </View>
   );
