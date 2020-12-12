@@ -84,7 +84,8 @@ const Inputs = () => {
         <TwitterButton
           theme={'light'}
           text={'Next'}
-          onPress={() => console.log('Next Button Tapped')}
+          onPress={() => {
+            console.log('Next Button Tapped (Not Implemented)');}}
         />
       </View>
     </View>

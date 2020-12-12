@@ -7,7 +7,10 @@ const TwitterButton = ({text, theme, onPress}) => {
       activeOpacity={0.75}
       underlayColor={'#fff'}
       style={styles.shape}
-      onPress={onPress}>
+      onPress={() => {
+        onPress();
+        console.log(`${text} button tapped.`);
+      }}>
       <View>
         {theme === 'dark' && (
           <View style={[styles.shape, styles.button, styles.dark]}>
