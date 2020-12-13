@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet, TextInput} from 'react-native';
 import TwitterButton from '../defaults/TwitterButton';
 
-const Inputs = () => {
+const Inputs = (props) => {
   const [isFocused, setIsFocused] = useState(undefined);
   const [usernameFocus, setUsernameFocus] = useState(false);
   const [passwordFocus, setPasswordFocus] = useState(false);
@@ -59,7 +59,10 @@ const Inputs = () => {
         />
       </View>
       <View style={styles.button}>
-        <TwitterButton text={'Log in'} />
+        <TwitterButton
+          text={'Log in'}
+          onPress={() => props.navigation.navigate('main')}
+        />
       </View>
     </View>
   );

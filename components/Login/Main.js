@@ -3,7 +3,7 @@ import {View, StyleSheet, ScrollView, Text, Pressable} from 'react-native';
 import Header from './Header';
 import Inputs from './Inputs';
 
-const Main = () => {
+const Main = (props) => {
   const [stylePressed, setStylePressed] = useState(undefined);
   let forgotPressedStyle = {
     color: '#5dbced',
@@ -15,7 +15,7 @@ const Main = () => {
         <Header />
       </View>
       <View style={styles.inputsWrapper}>
-        <Inputs />
+        <Inputs navigation={props.navigation} />
       </View>
       <Pressable
         onPressIn={() => {
