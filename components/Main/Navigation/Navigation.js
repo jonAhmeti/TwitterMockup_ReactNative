@@ -7,6 +7,7 @@ import BottomTabIcon, {
   bottomTabScreenOptions,
 } from './BottomTabDesign';
 import SearchNavigation from '../Search/Navigation/StackNavigation';
+import NotificationsNavigation from '../Notifications/Navigation/StackNavigation';
 
 const BottomTab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
@@ -36,7 +37,7 @@ const Navigation = () => {
       />
       <BottomTab.Screen
         name={'notifications'}
-        component={Main}
+        component={NotificationsNavigation}
         options={{
           tabBarIcon: ({focused, color, size}) =>
             BottomTabIcon({focused, color, size, icon: 'bell'}),
