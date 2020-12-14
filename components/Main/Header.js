@@ -1,17 +1,34 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
-import Logo from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const Header = () => {
+const Header = ({leftIcon, middleChild, rightIcon}) => {
   return (
     <View style={styles.container}>
-      <SimpleLineIcons name={'menu'} style={styles.icon} />
-      <Logo name={'twitter'} style={styles.icon} />
-      <MaterialIcons name={'insights'} style={styles.icon} />
+      <View style={styles.itemWrapper}>
+        <SimpleLineIcons
+          name={leftIcon}
+          style={styles.icon}
+          onPress={() => {
+            console.log('Clicked menu');
+          }}
+        />
+      </View>
+      <View style={[styles.itemWrapper, styles.middleChild]}>
+        {middleChild}
+      </View>
+      <View style={styles.itemWrapper}>
+        <MaterialIcons name={rightIcon} style={styles.icon} />
+      </View>
     </View>
   );
+};
+
+Header.defaultProps = {
+  leftIcon: 'menu',
+  rightIcon: 'insights',
+  middleChild: undefined,
 };
 
 const styles = StyleSheet.create({
@@ -19,14 +36,21 @@ const styles = StyleSheet.create({
     height: 60,
     borderColor: '#556872',
     borderBottomWidth: 0.2,
-    paddingHorizontal: 10,
     flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'space-between',
+    paddingVertical: 10,
   },
   icon: {
-    fontSize: 30,
+    fontSize: 25,
     color: '#5dbced',
+  },
+  itemWrapper: {
+    paddingHorizontal: 10,
+    justifyContent: 'center',
+  },
+  middleChild: {
+    alignItems: 'center',
+    flex: 1,
   },
 });
 export default Header;

@@ -8,7 +8,7 @@ const Tweet = ({tweet}) => {
       <View style={styles.imageSize}>
         <Image
           style={[styles.imageSize, styles.image]}
-          source={{uri: tweet.user.pic}}
+          source={{uri: tweet.user.pic, cache: 'reload'}}
         />
       </View>
       <View style={styles.tweet}>
@@ -25,6 +25,10 @@ const Tweet = ({tweet}) => {
           />
           <Ionicons name={'repeat-outline'} style={styles.tweetActionsIcons} />
           <Ionicons name={'heart-outline'} style={styles.tweetActionsIcons} />
+          <Ionicons
+            name={'share-social-outline'}
+            style={styles.tweetActionsIcons}
+          />
         </View>
       </View>
       <Ionicons name={'chevron-down-outline'} style={styles.menuAction} />

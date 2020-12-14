@@ -30,7 +30,7 @@ const TwitterButton = ({text, theme, onPress}) => {
 TwitterButton.defaultProps = {
   text: 'Button Text',
   theme: 'light',
-  onPress: () => console.log(`Warning: Button has not been implemented yet.`),
+  onPress: () => console.log('Warning: Button has not been implemented yet.'),
 };
 
 const styles = StyleSheet.create({

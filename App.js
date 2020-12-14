@@ -1,11 +1,11 @@
 import * as React from 'react';
-import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import AccountChoice from './components/AccountChoice/Main';
 import SignUpMain from './components/SignUp/Main';
 import LoginMain from './components/Login/Main';
-import Main from './components/Main/Main';
-import StackNavigator from '@react-navigation/stack/src/navigators/createStackNavigator';
+import MainNavigation from './components/Main/Navigation/Navigation';
+import {CardStyleInterpolators} from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
@@ -14,9 +14,30 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator headerMode={'none'}>
         <Stack.Screen name="accountChoice" component={AccountChoice} />
-        <Stack.Screen name="signUp" component={SignUpMain} />
-        <Stack.Screen name={'login'} component={LoginMain} />
-        <Stack.Screen name={'main'} component={Main} />
+        <Stack.Screen
+          name="signUp"
+          component={SignUpMain}
+          options={{
+            cardStyleInterpolator:
+              CardStyleInterpolators.forModalPresentationIOS,
+          }}
+        />
+        <Stack.Screen
+          name={'login'}
+          component={LoginMain}
+          options={{
+            cardStyleInterpolator:
+              CardStyleInterpolators.forModalPresentationIOS,
+          }}
+        />
+        <Stack.Screen
+          name={'main'}
+          options={{
+            cardStyleInterpolator:
+              CardStyleInterpolators.forScaleFromCenterAndroid,
+          }}
+          component={MainNavigation}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
