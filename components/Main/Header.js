@@ -34,8 +34,6 @@ Header.defaultProps = {
 const styles = StyleSheet.create({
   container: {
     height: 60,
-    borderColor: '#556872',
-    borderBottomWidth: 0.2,
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingVertical: 10,
@@ -53,4 +51,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
+
+export const borderStyle = {
+  borderColor: '#556872',
+  borderBottomWidth: 0.2,
+};
+
 export default Header;

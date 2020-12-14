@@ -1,13 +1,15 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import Header from './Header';
+import Header, {borderStyle} from './Header';
 import Body from './Body';
 import Logo from 'react-native-vector-icons/AntDesign';
 
 const Main = () => {
   return (
     <View style={styles.container}>
-      <Header middleChild={<Logo name={'twitter'} style={styles.logo} />} />
+      <View style={borderStyle}>
+        <Header middleChild={<Logo name={'twitter'} style={styles.logo} />} />
+      </View>
       <Body />
     </View>
   );

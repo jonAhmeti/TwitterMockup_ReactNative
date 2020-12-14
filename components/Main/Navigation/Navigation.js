@@ -8,6 +8,7 @@ import BottomTabIcon, {
 } from './BottomTabDesign';
 import SearchNavigation from '../Search/Navigation/StackNavigation';
 import NotificationsNavigation from '../Notifications/Navigation/StackNavigation';
+import MessagesNavigation from '../Messages/Navigation/StackNavigation';
 
 const BottomTab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
@@ -45,7 +46,7 @@ const Navigation = () => {
       />
       <BottomTab.Screen
         name={'messages'}
-        component={Main}
+        component={MessagesNavigation}
         options={{
           tabBarIcon: ({focused, color, size}) =>
             BottomTabIcon({focused, color, size, icon: 'mail'}),
