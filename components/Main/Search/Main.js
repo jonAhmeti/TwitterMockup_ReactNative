@@ -1,13 +1,18 @@
 import React from 'react';
 import {ScrollView, View, StyleSheet} from 'react-native';
-import Header, {borderStyle} from '../Header';
+import Header, {iconDefaultShape} from '../Header';
 import SearchBar from '../../defaults/SearchBar';
+import Feather from 'react-native-vector-icons/Feather';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const Main = () => {
   return (
     <ScrollView style={styles.container}>
-      <View style={borderStyle}>
-        <Header middleChild={<SearchBar />} />
+      <View>
+        <Header
+          middleChild={<SearchBar />}
+          rightIcon={<Feather name={'settings'} {...iconDefaultShape} />}
+        />
       </View>
     </ScrollView>
   );

@@ -3,12 +3,12 @@ import {View, StyleSheet} from 'react-native';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const Header = ({leftIcon, middleChild, rightIcon}) => {
+const Header = ({middleChild, rightIcon}) => {
   return (
     <View style={styles.container}>
       <View style={styles.itemWrapper}>
         <SimpleLineIcons
-          name={leftIcon}
+          name={'menu'}
           style={styles.icon}
           onPress={() => {
             console.log('Clicked menu');
@@ -19,21 +19,27 @@ const Header = ({leftIcon, middleChild, rightIcon}) => {
         {middleChild}
       </View>
       <View style={styles.itemWrapper}>
-        <MaterialIcons name={rightIcon} style={styles.icon} />
+        {rightIcon}
       </View>
     </View>
   );
 };
+export default Header;
 
 Header.defaultProps = {
-  leftIcon: 'menu',
-  rightIcon: 'insights',
   middleChild: undefined,
+};
+
+export const iconDefaultShape = {
+  color: '#5dbced',
+  size: 25,
 };
 
 const styles = StyleSheet.create({
   container: {
     height: 60,
+    borderColor: '#556872',
+    borderBottomWidth: 0.2,
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingVertical: 10,
@@ -51,10 +57,3 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-
-export const borderStyle = {
-  borderColor: '#556872',
-  borderBottomWidth: 0.2,
-};
-
-export default Header;

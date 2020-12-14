@@ -1,8 +1,14 @@
 import React from 'react';
-import {View, StyleSheet, Text, Image} from 'react-native';
+import {View, StyleSheet, Text, Image, TouchableHighlight} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const Tweet = ({tweet}) => {
+  const tweetActionWrapperStyle = {
+    activeOpacity: 1,
+    underlayColor: 'rgba(93,188,237,0.5)',
+    style: styles.tweetActionsIconsWrapper,
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.imageSize}>
@@ -19,16 +25,27 @@ const Tweet = ({tweet}) => {
         <Text style={styles.tweetText}>{tweet.tweet}</Text>
 
         <View style={styles.tweetActions}>
-          <Ionicons
-            name={'chatbubble-outline'}
-            style={styles.tweetActionsIcons}
-          />
-          <Ionicons name={'repeat-outline'} style={styles.tweetActionsIcons} />
-          <Ionicons name={'heart-outline'} style={styles.tweetActionsIcons} />
-          <Ionicons
-            name={'share-social-outline'}
-            style={styles.tweetActionsIcons}
-          />
+          <TouchableHighlight {...tweetActionWrapperStyle} onPress={() => {}}>
+            <Ionicons
+              name={'chatbubble-outline'}
+              style={styles.tweetActionsIcons}
+            />
+          </TouchableHighlight>
+          <TouchableHighlight {...tweetActionWrapperStyle} onPress={() => {}}>
+            <Ionicons
+              name={'repeat-outline'}
+              style={styles.tweetActionsIcons}
+            />
+          </TouchableHighlight>
+          <TouchableHighlight {...tweetActionWrapperStyle} onPress={() => {}}>
+            <Ionicons name={'heart-outline'} style={styles.tweetActionsIcons} />
+          </TouchableHighlight>
+          <TouchableHighlight {...tweetActionWrapperStyle} onPress={() => {}}>
+            <Ionicons
+              name={'share-social-outline'}
+              style={styles.tweetActionsIcons}
+            />
+          </TouchableHighlight>
         </View>
       </View>
       <Ionicons name={'chevron-down-outline'} style={styles.menuAction} />
@@ -82,11 +99,16 @@ const styles = StyleSheet.create({
   tweetActionsIcons: {
     color: '#fff',
     fontSize: 20,
+    borderRadius: 100,
   },
   menuAction: {
     color: '#556872',
     paddingLeft: 10,
     paddingRight: 15,
+  },
+  tweetActionsIconsWrapper: {
+    borderRadius: 100,
+    padding: 5,
   },
 });
 

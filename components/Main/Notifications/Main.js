@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, ScrollView, StyleSheet, Pressable} from 'react-native';
-import Header, {borderStyle} from '../Header';
+import Header, {iconDefaultShape} from '../Header';
+import Feather from 'react-native-vector-icons/Feather';
 
 const _middleChild = () => {
   return <Text style={styles.headerText}>Notifications</Text>;
@@ -11,8 +12,11 @@ const Main = () => {
 
   return (
     <ScrollView style={styles.container}>
-      <View style={borderStyle}>
-        <Header middleChild={_middleChild()} rightIcon={'settings'} />
+      <View>
+        <Header
+          middleChild={_middleChild()}
+          rightIcon={<Feather name={'settings'} {...iconDefaultShape} />}
+        />
         <View style={styles.categories}>
           {selectedCategory ? (
             <Pressable
