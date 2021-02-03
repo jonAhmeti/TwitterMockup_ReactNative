@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, ScrollView, Text, Pressable} from 'react-native';
+import {View, StyleSheet, Text, Pressable, ScrollView} from 'react-native';
 import Header from './Header';
 import Inputs from './Inputs';
+import Banner from './PlatformBanner/Banner';
 
 const Main = (props) => {
   const [stylePressed, setStylePressed] = useState(undefined);
@@ -10,7 +11,7 @@ const Main = (props) => {
   };
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView contentContainerStyle={{flexGrow: 1}} style={styles.container}>
       <View style={styles.header}>
         <Header />
       </View>
@@ -29,12 +30,14 @@ const Main = (props) => {
           Forgot password?
         </Text>
       </Pressable>
+      <View style={styles.banner}>
+        <Banner />
+      </View>
     </ScrollView>
   );
 };
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#15202b',
   },
   header: {
@@ -50,6 +53,12 @@ const styles = StyleSheet.create({
   forgotPasswordWrapper: {
     marginTop: 60,
     alignSelf: 'center',
+  },
+  banner: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'stretch',
+    flex: 1,
   },
 });
 

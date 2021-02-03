@@ -40,7 +40,7 @@ const Inputs = (props) => {
           onFocus={() => onInputFocus('username')}
           onBlur={() => onInputBlur()}
           style={styles.input}
-          value={props.route.params.email}
+          defaultValue={props.route.params?.email}
         />
       </View>
       <View
