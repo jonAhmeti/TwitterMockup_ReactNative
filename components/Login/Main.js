@@ -15,7 +15,7 @@ const Main = (props) => {
         <Header />
       </View>
       <View style={styles.inputsWrapper}>
-        <Inputs navigation={props.navigation} />
+        <Inputs navigation={props.navigation} route={props.route} />
       </View>
       <Pressable
         onPressIn={() => {

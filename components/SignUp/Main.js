@@ -3,12 +3,12 @@ import {View, StyleSheet} from 'react-native';
 import Header from './Header';
 import Inputs from './Inputs';
 
-const Main = () => {
+const Main = (props) => {
   return (
     <View style={styles.container}>
       <Header />
       <View style={styles.inputsView}>
-        <Inputs />
+        <Inputs navigation={props.navigation} />
       </View>
     </View>
   );

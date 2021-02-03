@@ -5,8 +5,8 @@ import Tweet from '../defaults/Tweet';
 const tweets = [
   {
     user: {
-      displayName: 'WhoAmI',
-      username: 'username',
+      displayName: 'Naim Frasheri',
+      username: 'NoNaim',
       pic: 'https://thispersondoesnotexist.com/image',
     },
     tweet: 'This.',

@@ -1,11 +1,23 @@
 import React, {useState} from 'react';
-import {Text, TextInput, Pressable, View, StyleSheet} from 'react-native';
+import {
+  Text,
+  TextInput,
+  Pressable,
+  View,
+  StyleSheet,
+  ToastAndroid,
+  Platform,
+} from 'react-native';
 import RNDateTimePicker from '@react-native-community/datetimepicker';
 import TwitterButton from '../defaults/TwitterButton';
+import {Toast} from 'native-base';
 
-const Inputs = () => {
+const Inputs = (props) => {
   const [showDob, setShowDob] = useState(false);
   const [dob, setDob] = useState(undefined);
+
+  const RegisteredMsg = 'Account created!\nWelcome to Twitter';
+  let typedEmail = '';
 
   function todaysDate() {
     let today = new Date();
@@ -34,7 +46,6 @@ const Inputs = () => {
 
   return (
     <View style={styles.container}>
-
       <View style={styles.inputWrapper}>
         <Text style={styles.inputLabel}>Name:</Text>
         <TextInput
@@ -71,7 +82,11 @@ const Inputs = () => {
 
       <View style={styles.inputWrapper}>
         <Text style={styles.inputLabel}>Email:</Text>
-        <TextInput style={styles.inputText} keyboardType={'email-address'} />
+        <TextInput
+          style={styles.inputText}
+          keyboardType={'email-address'}
+          onChangeText={(text) => (typedEmail = text)}
+        />
       </View>
       <View style={styles.inputWrapper}>
         <Text style={styles.inputLabel}>Password:</Text>
@@ -82,6 +97,12 @@ const Inputs = () => {
         <TwitterButton
           theme={'light'}
           text={'Next'}
+          onPress={() => {
+            props.navigation.navigate('login', {email: typedEmail});
+            Platform.OS === 'android'
+              ? ToastAndroid.show(RegisteredMsg, ToastAndroid.SHORT)
+              : Toast.show(RegisteredMsg);
+          }}
         />
       </View>
     </View>
