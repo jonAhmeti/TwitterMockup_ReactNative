@@ -41,6 +41,8 @@ const Inputs = (props) => {
         alert('Wrong email or password.');
         console.log(e);
       }
+    } else {
+      alert('Please type your username or email and password');
     }
   }
   function onInputFocus(inputName) {

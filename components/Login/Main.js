@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, Text, Pressable, ScrollView} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  Pressable,
+  ScrollView,
+  Alert,
+} from 'react-native';
 import Header from './Header';
 import Inputs from './Inputs';
 import Banner from './PlatformBanner/Banner';
@@ -21,6 +28,10 @@ const Main = (props) => {
       <Pressable
         onPressIn={() => {
           setStylePressed(forgotPressedStyle);
+          Alert.alert('Forgot password?', 'Too bad :)', [
+            {text: 'Rude.'},
+            {text: 'K.'},
+          ]);
         }}
         onPressOut={() => {
           setStylePressed(undefined);
