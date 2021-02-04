@@ -6,7 +6,43 @@ const Inputs = (props) => {
   const [isFocused, setIsFocused] = useState(undefined);
   const [usernameFocus, setUsernameFocus] = useState(false);
   const [passwordFocus, setPasswordFocus] = useState(false);
+  const [username, setUsername] = useState(undefined);
+  const [password, setPassword] = useState(undefined);
 
+  async function login() {
+    if (username && password) {
+      try {
+        let result = await fetch(
+          `https://twitterapi.conveyor.cloud/User/${username}`,
+          {
+            method: 'POST',
+            headers: {
+              Accept: 'application/json',
+              'Content-Type': 'application/json',
+            },
+            body: {
+              username: username,
+            },
+          },
+        );
+        let jsonResult = await result.json();
+        console.log(jsonResult);
+        if (jsonResult !== null) {
+          if (
+            jsonResult.username === username &&
+            jsonResult.password === password
+          ) {
+            props.navigation.navigate('main');
+          } else {
+            alert('Wrong email or password.');
+          }
+        }
+      } catch (e) {
+        alert('Wrong email or password.');
+        console.log(e);
+      }
+    }
+  }
   function onInputFocus(inputName) {
     if (inputName === 'password') {
       setPasswordFocus(true);
@@ -18,7 +54,6 @@ const Inputs = (props) => {
       setPasswordFocus(false);
     }
   }
-
   function onInputBlur() {
     setUsernameFocus(false);
     setPasswordFocus(false);
@@ -41,6 +76,7 @@ const Inputs = (props) => {
           onBlur={() => onInputBlur()}
           style={styles.input}
           defaultValue={props.route.params?.email}
+          onChangeText={(text) => setUsername(text)}
         />
       </View>
       <View
@@ -57,13 +93,11 @@ const Inputs = (props) => {
           onFocus={() => onInputFocus('password')}
           onBlur={() => onInputBlur()}
           style={styles.input}
+          onChangeText={(text) => setPassword(text)}
         />
       </View>
       <View style={styles.button}>
-        <TwitterButton
-          text={'Log in'}
-          onPress={() => props.navigation.navigate('main')}
-        />
+        <TwitterButton text={'Log in'} onPress={() => login()} />
       </View>
     </View>
   );

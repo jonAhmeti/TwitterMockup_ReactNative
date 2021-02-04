@@ -7,6 +7,7 @@ import {
   StyleSheet,
   ToastAndroid,
   Platform,
+  ActivityIndicator,
 } from 'react-native';
 import RNDateTimePicker from '@react-native-community/datetimepicker';
 import TwitterButton from '../defaults/TwitterButton';
@@ -15,16 +16,17 @@ import {Toast} from 'native-base';
 const Inputs = (props) => {
   const [showDob, setShowDob] = useState(false);
   const [dob, setDob] = useState(undefined);
-
+  const [name, setName] = useState(undefined);
+  const [email, setEmail] = useState(undefined);
+  const [password, setPassword] = useState(undefined);
+  const [fetching, setFetching] = useState(false);
   const RegisteredMsg = 'Account created!\nWelcome to Twitter';
-  let typedEmail = '';
 
   function todaysDate() {
     let today = new Date();
     today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
     return today;
   }
-
   function onDatePick(event, date) {
     if (date instanceof Date) {
       setDob(date);
@@ -32,7 +34,6 @@ const Inputs = (props) => {
     setShowDob(false);
     console.log('Date of birth picker closed');
   }
-
   function dobValue(altValue) {
     if (dob) {
       return `${dob.toDateString()}`;
@@ -44,6 +45,45 @@ const Inputs = (props) => {
     return dob ? '#fff' : '#5dbced';
   }
 
+  async function registerUser() {
+    if (dob && name && email && password) {
+      setFetching(true);
+      try {
+        let result = await fetch('https://twitterapi.conveyor.cloud/User', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            username: email,
+            email: email,
+            name: name,
+            dob: dob,
+            password: password,
+          }),
+        });
+        let jsonResult = await result.json();
+        console.log(jsonResult);
+        if (jsonResult === true) {
+          props.navigation.navigate('login', {email: email});
+          Platform.OS === 'android'
+            ? ToastAndroid.show(RegisteredMsg, ToastAndroid.SHORT)
+            : Toast.show(RegisteredMsg);
+        } else {
+          alert('Email already exists.');
+        }
+      } catch (e) {
+        alert('Sorry, something went wrong.');
+        console.log(e);
+      } finally {
+        setFetching(false);
+      }
+    } else {
+      setFetching(false);
+      alert('Please fill all fields');
+    }
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.inputWrapper}>
@@ -52,6 +92,7 @@ const Inputs = (props) => {
           style={styles.inputText}
           autoCapitalize={'words'}
           maxLength={50}
+          onChangeText={(text) => setName(text)}
         />
       </View>
 
@@ -85,26 +126,35 @@ const Inputs = (props) => {
         <TextInput
           style={styles.inputText}
           keyboardType={'email-address'}
-          onChangeText={(text) => (typedEmail = text)}
+          onChangeText={(text) => setEmail(text)}
         />
       </View>
       <View style={styles.inputWrapper}>
         <Text style={styles.inputLabel}>Password:</Text>
-        <TextInput style={styles.inputText} secureTextEntry={true} />
-      </View>
-
-      <View style={styles.nextWrapper}>
-        <TwitterButton
-          theme={'light'}
-          text={'Next'}
-          onPress={() => {
-            props.navigation.navigate('login', {email: typedEmail});
-            Platform.OS === 'android'
-              ? ToastAndroid.show(RegisteredMsg, ToastAndroid.SHORT)
-              : Toast.show(RegisteredMsg);
-          }}
+        <TextInput
+          style={styles.inputText}
+          onChangeText={(text) => setPassword(text)}
+          secureTextEntry={true}
         />
       </View>
+
+      {fetching ? (
+        <ActivityIndicator
+          style={{marginTop: 50}}
+          size={'large'}
+          color={'#5dbced'}
+        />
+      ) : (
+        <View style={styles.nextWrapper}>
+          <TwitterButton
+            theme={'light'}
+            text={'Next'}
+            onPress={() => {
+              registerUser();
+            }}
+          />
+        </View>
+      )}
     </View>
   );
 };
