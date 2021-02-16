@@ -1,5 +1,11 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, TextInput} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  ActivityIndicator,
+} from 'react-native';
 import TwitterButton from '../defaults/TwitterButton';
 
 const Inputs = (props) => {
@@ -8,40 +14,45 @@ const Inputs = (props) => {
   const [passwordFocus, setPasswordFocus] = useState(false);
   const [username, setUsername] = useState(undefined);
   const [password, setPassword] = useState(undefined);
+  const [fetching, setFetching] = useState(false);
 
   async function login() {
+    props.route.params?.email
+      ? setUsername(props.route.params.email)
+      : undefined;
+
     if (username && password) {
       try {
+        setFetching(true);
         let result = await fetch(
-          `https://twitterapi.conveyor.cloud/User/${username}`,
+          'https://twitterapi.conveyor.cloud/User/Login',
           {
             method: 'POST',
             headers: {
               Accept: 'application/json',
               'Content-Type': 'application/json',
             },
-            body: {
+            body: JSON.stringify({
               username: username,
-            },
+              password: password,
+            }),
           },
         );
         let jsonResult = await result.json();
         console.log(jsonResult);
-        if (jsonResult !== null) {
-          if (
-            jsonResult.username === username &&
-            jsonResult.password === password
-          ) {
-            props.navigation.navigate('main');
-          } else {
-            alert('Wrong email or password.');
-          }
-        }
+        setFetching(false);
+        jsonResult === true
+          ? props.navigation.navigate('main')
+          : alert('Invalid username or password');
       } catch (e) {
-        alert('Wrong email or password.');
+        setFetching(false);
+        alert(
+          'Sorry, something went wrong.\nPlease make sure you have a working internet connection.',
+        );
         console.log(e);
       }
     } else {
+      setFetching(false);
       alert('Please type your username or email and password');
     }
   }
@@ -98,9 +109,18 @@ const Inputs = (props) => {
           onChangeText={(text) => setPassword(text)}
         />
       </View>
-      <View style={styles.button}>
-        <TwitterButton text={'Log in'} onPress={() => login()} />
-      </View>
+
+      {fetching ? (
+        <ActivityIndicator
+          style={styles.button}
+          size={'large'}
+          color={'#5dbced'}
+        />
+      ) : (
+        <View style={styles.button}>
+          <TwitterButton text={'Log in'} onPress={() => login()} />
+        </View>
+      )}
     </View>
   );
 };

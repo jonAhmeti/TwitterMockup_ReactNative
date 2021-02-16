@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
   },
   image: {
     borderRadius: 100,
+    backgroundColor: 'rgba(93, 188, 237, 0.1)',
   },
   tweet: {
     flex: 1,

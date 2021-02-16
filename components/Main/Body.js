@@ -1,6 +1,8 @@
-import React from 'react';
-import {View, StyleSheet, Text, SectionList} from 'react-native';
+import React, {useState} from 'react';
+import {View, StyleSheet, SectionList} from 'react-native';
 import Tweet from '../defaults/Tweet';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Compose from '../defaults/Compose';
 
 const tweets = [
   {
@@ -30,13 +32,33 @@ const testData = [{data: tweets}];
 
 const Body = () => {
   return (
-    <SectionList
-      sections={testData}
-      renderItem={({item}) => <Tweet tweet={item} />}
-    />
+    <View style={styles.tweetsWrapper}>
+      <SectionList
+        sections={testData}
+        renderItem={({item}) => <Tweet tweet={item} />}
+      />
+
+      <View style={styles.compose}>
+        <Compose
+          onPress={() => console.log('Hi')}
+          icon={<FontAwesome5 name={'feather-alt'} size={25} color={'#fff'} />}
+          touchableOptions={{activeOpacity: 0.55, underlayColor: '#fff'}}
+        />
+      </View>
+    </View>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  tweetsWrapper: {
+    flex: 1,
+  },
+  compose: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    margin: 20,
+  },
+});
 
 export default Body;
