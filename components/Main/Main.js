@@ -5,14 +5,14 @@ import Body from './Body';
 import Logo from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const Main = () => {
+const Main = (props) => {
   return (
     <View style={styles.container}>
       <Header
         middleChild={<Logo name={'twitter'} style={styles.logo} />}
         rightIcon={<MaterialIcons name={'insights'} {...iconDefaultShape} />}
       />
-      <Body />
+      <Body navigation={props.navigation} />
     </View>
   );
 };

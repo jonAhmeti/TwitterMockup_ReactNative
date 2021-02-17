@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, StyleSheet, SectionList} from 'react-native';
 import Tweet from '../defaults/Tweet';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Compose from '../defaults/Compose';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const tweets = [
   {
@@ -27,10 +27,24 @@ const tweets = [
     date: '1999/99/99',
   },
 ];
-
 const testData = [{data: tweets}];
 
-const Body = () => {
+async function getTweets() {
+  try {
+    console.log('fetching tweets');
+    let result = await fetch('https://twitterapi.conveyor.cloud/Tweet', {
+      method: 'GET',
+    });
+    let jsonResult = await result.json();
+    console.log(jsonResult);
+    return jsonResult;
+  } catch (e) {
+    alert('Sorry, something went wrong getting your tweets.');
+    console.log(e);
+  }
+}
+
+const Body = (props) => {
   return (
     <View style={styles.tweetsWrapper}>
       <SectionList
@@ -40,7 +54,10 @@ const Body = () => {
 
       <View style={styles.compose}>
         <Compose
-          onPress={() => console.log('Hi')}
+          onPress={() => {
+            console.log('Compose clicked.');
+            props.navigation.navigate('ComposeTweet');
+          }}
           icon={<FontAwesome5 name={'feather-alt'} size={25} color={'#fff'} />}
           touchableOptions={{activeOpacity: 0.55, underlayColor: '#fff'}}
         />
