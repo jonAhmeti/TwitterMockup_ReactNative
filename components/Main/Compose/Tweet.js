@@ -1,17 +1,47 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Image,
   StyleSheet,
   Text,
   TextInput,
-  KeyboardAvoidingView,
+  Platform,
+  ToastAndroid,
 } from 'react-native';
 import TwitterButton from '../../defaults/TwitterButton';
+import {Toast} from 'native-base';
+
+async function tweet(userId, text, navigation) {
+  try {
+    let result = await fetch('https://twitterapi.conveyor.cloud/Tweet/Create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        userId: userId,
+        text: text,
+      }),
+    });
+    let jsonResult = await result.json();
+    console.log(jsonResult);
+    if (jsonResult === true) {
+      navigation.navigate('home');
+      Platform.OS === 'android'
+        ? ToastAndroid.show('Tweeted!', ToastAndroid.SHORT)
+        : Toast.show('Tweeted!');
+    } else {
+      alert("Tweet couldn't be created.");
+    }
+  } catch (e) {
+    alert('Sorry, something went wrong creating your tweet.');
+    console.log(e);
+  }
+}
 
 const Tweet = (props) => {
   return (
-    <KeyboardAvoidingView style={styles.tweetsWrapper}>
+    <View style={styles.tweetsWrapper}>
       <View style={styles.dialogOptions}>
         <View style={styles.dialogCloseWrapper}>
           <Text
@@ -24,7 +54,13 @@ const Tweet = (props) => {
           </Text>
         </View>
         <View style={styles.dialogTweetWrapper}>
-          <TwitterButton text={'Tweet'} />
+          <TwitterButton
+            text={'Tweet'}
+            onPress={() => {
+              //IMPORTANT FIX USERID AND TEXT
+              tweet(43, 'whateber', props.navigation);
+            }}
+          />
         </View>
       </View>
       <View style={styles.textSection}>
@@ -46,7 +82,7 @@ const Tweet = (props) => {
           />
         </View>
       </View>
-    </KeyboardAvoidingView>
+    </View>
   );
 };
 
@@ -70,7 +106,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#fff',
-    fontSize: 20,
+    fontSize: 24,
     padding: 0,
   },
   imageWrapper: {

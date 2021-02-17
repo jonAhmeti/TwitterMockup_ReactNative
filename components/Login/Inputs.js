@@ -8,6 +8,9 @@ import {
 } from 'react-native';
 import TwitterButton from '../defaults/TwitterButton';
 
+import store from '../../redux/store';
+import * as userActions from '../../redux/actions/userActions';
+
 const Inputs = (props) => {
   const [isFocused, setIsFocused] = useState(undefined);
   const [usernameFocus, setUsernameFocus] = useState(false);
@@ -41,9 +44,15 @@ const Inputs = (props) => {
         let jsonResult = await result.json();
         console.log(jsonResult);
         setFetching(false);
-        jsonResult === true
-          ? props.navigation.navigate('main')
-          : alert('Invalid username or password');
+        if (jsonResult) {
+          store.dispatch(userActions.loggedIn(jsonResult));
+          console.log('store.getState()', store.getState());
+          store.dispatch(userActions.loggedOut());
+          console.log('store.getState()', store.getState());
+          props.navigation.navigate('main');
+        } else {
+          alert('Invalid username or password');
+        }
       } catch (e) {
         setFetching(false);
         alert(

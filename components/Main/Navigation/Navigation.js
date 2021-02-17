@@ -8,7 +8,7 @@ import Tweet from '../Compose/Tweet';
 
 const Stack = createStackNavigator();
 
-const Navigation = () => {
+const Navigation = (props) => {
   return (
     <Stack.Navigator
       initialRouteName={'MainBottomTabNavigation'}
