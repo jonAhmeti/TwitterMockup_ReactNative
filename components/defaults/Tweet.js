@@ -14,15 +14,18 @@ const Tweet = ({tweet}) => {
       <View style={styles.imageSize}>
         <Image
           style={[styles.imageSize, styles.image]}
-          source={{uri: tweet.user.pic, cache: 'reload'}}
+          source={{
+            uri: 'https://thispersondoesnotexist.com/image',
+            cache: 'reload',
+          }}
         />
       </View>
       <View style={styles.tweet}>
         <View style={styles.tweetHeader}>
-          <Text style={styles.displayName}>{tweet.user.displayName}</Text>
-          <Text style={styles.username}>@{tweet.user.username}</Text>
+          <Text style={styles.displayName}>{tweet.user}</Text>
+          <Text style={styles.username}>@{tweet.user}</Text>
         </View>
-        <Text style={styles.tweetText}>{tweet.tweet}</Text>
+        <Text style={styles.tweetText}>{tweet.text}</Text>
 
         <View style={styles.tweetActions}>
           <TouchableHighlight {...tweetActionWrapperStyle} onPress={() => {}}>

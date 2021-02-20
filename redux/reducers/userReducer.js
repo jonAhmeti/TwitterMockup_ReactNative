@@ -1,16 +1,16 @@
-import * as actionTypes from '../actionTypes/userActions';
+import * as actionTypes from '../actionTypes/userActionTypes';
 
 let initialState = {};
 
-export function userReducer(state = initialState, action) {
+export default function userReducer(state = initialState, action) {
   switch (action.type) {
-    case actionTypes.LoggedIn:
+    case actionTypes.loggedIn:
       return {
         ...state,
         ...action.payload,
       };
 
-    case actionTypes.LoggedOut:
+    case actionTypes.loggedOut:
       return {
         ...action.payload,
       };

@@ -1,15 +1,15 @@
-import * as actionTypes from '../actionTypes/userActions';
+import * as actionTypes from '../actionTypes/userActionTypes';
 
 export function loggedIn(user) {
   return {
-    type: actionTypes.LoggedIn,
+    type: actionTypes.loggedIn,
     payload: user,
   };
 }
 
 export function loggedOut() {
   return {
-    type: actionTypes.LoggedOut,
+    type: actionTypes.loggedOut,
     payload: null,
   };
 }

@@ -10,29 +10,20 @@ import {
 } from 'react-native';
 import TwitterButton from '../../defaults/TwitterButton';
 import {Toast} from 'native-base';
+import store from '../../../redux/store';
 
-async function tweet(userId, text, navigation) {
+function tweet(username, text) {
   try {
-    let result = await fetch('https://twitterapi.conveyor.cloud/Tweet/Create', {
+    return fetch('https://twitterapi.conveyor.cloud/Tweet/Create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        userId: userId,
+        user: username,
         text: text,
       }),
-    });
-    let jsonResult = await result.json();
-    console.log(jsonResult);
-    if (jsonResult === true) {
-      navigation.navigate('home');
-      Platform.OS === 'android'
-        ? ToastAndroid.show('Tweeted!', ToastAndroid.SHORT)
-        : Toast.show('Tweeted!');
-    } else {
-      alert("Tweet couldn't be created.");
-    }
+    }).then((response) => response.json());
   } catch (e) {
     alert('Sorry, something went wrong creating your tweet.');
     console.log(e);
@@ -40,6 +31,9 @@ async function tweet(userId, text, navigation) {
 }
 
 const Tweet = (props) => {
+  const [tweetText, setTweetText] = useState(undefined);
+  const [tweetable, setTweetable] = useState(false);
+
   return (
     <View style={styles.tweetsWrapper}>
       <View style={styles.dialogOptions}>
@@ -57,8 +51,24 @@ const Tweet = (props) => {
           <TwitterButton
             text={'Tweet'}
             onPress={() => {
-              //IMPORTANT FIX USERID AND TEXT
-              tweet(43, 'whateber', props.navigation);
+              if (!tweetable) {
+                console.log('TwitterButton disabled, terminating onPress.');
+                return undefined;
+              }
+              console.log('Tweeting...');
+              tweet(store.getState().currentUser.username, tweetText).then(
+                (result) => {
+                  console.log(result);
+                  if (result === true) {
+                    props.navigation.navigate('home');
+                    Platform.OS === 'android'
+                      ? ToastAndroid.show('Tweeted!', ToastAndroid.SHORT)
+                      : Toast.show('Tweeted!');
+                  } else {
+                    alert("Tweet couldn't be created.");
+                  }
+                },
+              );
             }}
           />
         </View>
@@ -79,6 +89,12 @@ const Tweet = (props) => {
             multiline={true}
             maxLength={280}
             style={styles.text}
+            onChangeText={(text) => {
+              setTweetText(text);
+              tweetText && tweetText !== ''
+                ? setTweetable(true)
+                : setTweetable(false);
+            }}
           />
         </View>
       </View>

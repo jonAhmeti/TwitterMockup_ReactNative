@@ -42,13 +42,10 @@ const Inputs = (props) => {
           },
         );
         let jsonResult = await result.json();
-        console.log(jsonResult);
         setFetching(false);
         if (jsonResult) {
           store.dispatch(userActions.loggedIn(jsonResult));
-          console.log('store.getState()', store.getState());
-          store.dispatch(userActions.loggedOut());
-          console.log('store.getState()', store.getState());
+          console.log('user logged in', store.getState());
           props.navigation.navigate('main');
         } else {
           alert('Invalid username or password');
