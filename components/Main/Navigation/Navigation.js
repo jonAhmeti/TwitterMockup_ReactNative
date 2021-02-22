@@ -5,6 +5,7 @@ import {
 } from '@react-navigation/stack';
 import BottomTabNavigation from './BottomTabNavigation';
 import Tweet from '../Compose/Tweet';
+import TweetComments from '../../defaults/TweetComments/Layout';
 
 const Stack = createStackNavigator();
 
@@ -12,10 +13,11 @@ const Navigation = (props) => {
   return (
     <Stack.Navigator
       initialRouteName={'MainBottomTabNavigation'}
-      headerMode={'none'}>
+      headerMode={'screen'}>
       <Stack.Screen
         name={'MainBottomTabNavigation'}
         component={BottomTabNavigation}
+        options={{headerShown: false}}
       />
       <Stack.Screen
         name={'ComposeTweet'}
@@ -23,6 +25,26 @@ const Navigation = (props) => {
         options={{
           cardStyleInterpolator: CardStyleInterpolators.forVerticalIOS,
           cardStyle: {backgroundColor: '#15202b'},
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name={'TweetComments'}
+        component={TweetComments}
+        options={{
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+          cardStyle: {backgroundColor: '#15202b'},
+          headerShown: true,
+          headerStyle: {
+            backgroundColor: '#15202b',
+            shadowOpacity: 0,
+            elevation: 0,
+            borderBottomWidth: 0.2,
+            borderBottomColor: '#556872',
+          },
+          headerTitleStyle: {color: '#fff'},
+          headerTintColor: '#1da1f2',
+          title: 'Tweet',
         }}
       />
     </Stack.Navigator>

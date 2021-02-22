@@ -18,15 +18,10 @@
       <change beforePath="$PROJECT_DIR$/android/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Login/Inputs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Login/Inputs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Main/Body.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Main/Body.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Main/Compose/Tweet.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Main/Compose/Tweet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Main/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Main/Navigation/Navigation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/defaults/Tweet.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/defaults/Tweet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/actionTypes/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actionTypes/userActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/userActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/reducers/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/userReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +76,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\AppData\React Projects\RiinvestProject\components\defaults\TweetComments" />
       <recent name="D:\AppData\React Projects\RiinvestProject\components\Main\Navigation" />
       <recent name="D:\AppData\React Projects\RiinvestProject\pngs" />
     </key>
@@ -136,7 +132,10 @@
       <workItem from="1613590241361" duration="6350000" />
       <workItem from="1613672075320" duration="6815000" />
       <workItem from="1613748414441" duration="8555000" />
-      <workItem from="1613855077725" duration="6370000" />
+      <workItem from="1613855077725" duration="6414000" />
+      <workItem from="1613933882957" duration="7731000" />
+      <workItem from="1613941880913" duration="6536000" />
+      <workItem from="1613991553782" duration="17157000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1607286947351</created>
@@ -223,54 +222,54 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="496" y="256" key="Github.CreateGistDialog/0.0.1360.728@0.0.1360.728" timestamp="1607195962129" />
-    <state width="1078" height="200" key="GridCell.Tab.0.bottom" timestamp="1613855214726">
+    <state width="1078" height="128" key="GridCell.Tab.0.bottom" timestamp="1614003987650">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="200" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1613855214726" />
-    <state width="1078" height="200" key="GridCell.Tab.0.center" timestamp="1613855214726">
+    <state width="1078" height="128" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1614003987650" />
+    <state width="1078" height="128" key="GridCell.Tab.0.center" timestamp="1614003987650">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="200" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1613855214726" />
-    <state width="1078" height="200" key="GridCell.Tab.0.left" timestamp="1613855214726">
+    <state width="1078" height="128" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1614003987650" />
+    <state width="1078" height="128" key="GridCell.Tab.0.left" timestamp="1614003987650">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="200" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1613855214726" />
-    <state width="1078" height="200" key="GridCell.Tab.0.right" timestamp="1613855214726">
+    <state width="1078" height="128" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1614003987650" />
+    <state width="1078" height="128" key="GridCell.Tab.0.right" timestamp="1614003987650">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="200" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1613855214726" />
-    <state width="1078" height="200" key="GridCell.Tab.1.bottom" timestamp="1613855214726">
+    <state width="1078" height="128" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1614003987650" />
+    <state width="1078" height="128" key="GridCell.Tab.1.bottom" timestamp="1614003987650">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="200" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1613855214726" />
-    <state width="1078" height="200" key="GridCell.Tab.1.center" timestamp="1613855214726">
+    <state width="1078" height="128" key="GridCell.Tab.1.bottom/0.0.1360.728@0.0.1360.728" timestamp="1614003987650" />
+    <state width="1078" height="128" key="GridCell.Tab.1.center" timestamp="1614003987650">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="200" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1613855214726" />
-    <state width="1078" height="200" key="GridCell.Tab.1.left" timestamp="1613855214726">
+    <state width="1078" height="128" key="GridCell.Tab.1.center/0.0.1360.728@0.0.1360.728" timestamp="1614003987650" />
+    <state width="1078" height="128" key="GridCell.Tab.1.left" timestamp="1614003987650">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="200" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1613855214726" />
-    <state width="1078" height="200" key="GridCell.Tab.1.right" timestamp="1613855214726">
+    <state width="1078" height="128" key="GridCell.Tab.1.left/0.0.1360.728@0.0.1360.728" timestamp="1614003987650" />
+    <state width="1078" height="128" key="GridCell.Tab.1.right" timestamp="1614003987650">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="200" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1613855214726" />
-    <state width="1078" height="200" key="GridCell.Tab.2.bottom" timestamp="1613855214727">
+    <state width="1078" height="128" key="GridCell.Tab.1.right/0.0.1360.728@0.0.1360.728" timestamp="1614003987650" />
+    <state width="1078" height="128" key="GridCell.Tab.2.bottom" timestamp="1614003987651">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="200" key="GridCell.Tab.2.bottom/0.0.1360.728@0.0.1360.728" timestamp="1613855214727" />
-    <state width="1078" height="200" key="GridCell.Tab.2.center" timestamp="1613855214726">
+    <state width="1078" height="128" key="GridCell.Tab.2.bottom/0.0.1360.728@0.0.1360.728" timestamp="1614003987651" />
+    <state width="1078" height="128" key="GridCell.Tab.2.center" timestamp="1614003987651">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="200" key="GridCell.Tab.2.center/0.0.1360.728@0.0.1360.728" timestamp="1613855214726" />
-    <state width="1078" height="200" key="GridCell.Tab.2.left" timestamp="1613855214726">
+    <state width="1078" height="128" key="GridCell.Tab.2.center/0.0.1360.728@0.0.1360.728" timestamp="1614003987651" />
+    <state width="1078" height="128" key="GridCell.Tab.2.left" timestamp="1614003987650">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="200" key="GridCell.Tab.2.left/0.0.1360.728@0.0.1360.728" timestamp="1613855214726" />
-    <state width="1078" height="200" key="GridCell.Tab.2.right" timestamp="1613855214726">
+    <state width="1078" height="128" key="GridCell.Tab.2.left/0.0.1360.728@0.0.1360.728" timestamp="1614003987650" />
+    <state width="1078" height="128" key="GridCell.Tab.2.right" timestamp="1614003987651">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state width="1078" height="200" key="GridCell.Tab.2.right/0.0.1360.728@0.0.1360.728" timestamp="1613855214726" />
+    <state width="1078" height="128" key="GridCell.Tab.2.right/0.0.1360.728@0.0.1360.728" timestamp="1614003987651" />
     <state x="185" y="0" key="SettingsEditor" timestamp="1607951322669">
       <screen x="0" y="0" width="1360" height="728" />
     </state>

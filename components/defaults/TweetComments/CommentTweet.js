@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   View,
   StyleSheet,
@@ -6,55 +6,11 @@ import {
   Image,
   TouchableHighlight,
   Share,
-  Pressable,
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import store from '../../redux/store';
 
-const Tweet = ({tweet, navigation}) => {
-  // check this out one more time .. console.log(tweet);
-  const [liked, setLiked] = useState(tweet.liked);
-  console.log('isliked??', tweet.liked);
-
-  function like() {
-    tweet.liked = true;
-    tweet.likes++;
-    try {
-      return fetch('https://twitterapi.conveyor.cloud/LikedTweet/Like', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          userId: store.getState().currentUser.id,
-          tweetId: tweet.id,
-        }),
-      }).then((data) => data.json());
-    } catch (e) {
-      console.log(e);
-    }
-  }
-  function unlike() {
-    tweet.liked = false;
-    tweet.likes--;
-    try {
-      return fetch('https://twitterapi.conveyor.cloud/LikedTweet/Unlike', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          userId: store.getState().currentUser.id,
-          tweetId: tweet.id,
-        }),
-      }).then((data) => data.json());
-    } catch (e) {
-      console.log(e);
-    }
-  }
-
+const CommentTweet = ({tweet}) => {
+  const tweetDate = new Date(tweet.date);
   const tweetActionWrapperStyle = {
     activeOpacity: 1,
     underlayColor: 'rgba(93,188,237,0.5)',
@@ -62,9 +18,7 @@ const Tweet = ({tweet, navigation}) => {
   };
 
   return (
-    <Pressable
-      style={styles.container}
-      onPress={() => navigation.navigate('TweetComments', {tweet})}>
+    <View style={styles.container}>
       <View style={styles.imageSize}>
         <Image
           style={[styles.imageSize, styles.image]}
@@ -77,9 +31,15 @@ const Tweet = ({tweet, navigation}) => {
       <View style={styles.tweet}>
         <View style={styles.tweetHeader}>
           <Text style={styles.displayName}>{tweet.user}</Text>
-          <Text style={styles.username}>@{tweet.user}</Text>
+          <Text style={styles.username}>@{tweet.user} ∙ </Text>
+          <Text style={styles.username}>{`${
+            tweetDate.getHours() === 0 ? '00' : tweetDate.getHours()
+          }:${tweetDate.getMinutes()} ∙ ${tweetDate.getDate()} ${tweetDate.toLocaleString(
+            'default',
+            {month: 'short'},
+          )} ${tweetDate.getFullYear().toString().substring(2)}`}</Text>
         </View>
-        <Text style={styles.tweetText}>{tweet.text}</Text>
+        <Text style={styles.tweetText}>{tweet.comment}</Text>
 
         <View style={styles.tweetActions}>
           <TouchableHighlight {...tweetActionWrapperStyle} onPress={() => {}}>
@@ -94,21 +54,8 @@ const Tweet = ({tweet, navigation}) => {
               style={styles.tweetActionsIcons}
             />
           </TouchableHighlight>
-          <TouchableHighlight
-            {...tweetActionWrapperStyle}
-            onPress={() => {
-              if (liked === true) {
-                setLiked(false);
-                unlike().then((result) => console.log(result));
-              } else {
-                setLiked(true);
-                like().then((result) => console.log(result));
-              }
-            }}>
-            <Ionicons
-              name={liked === true ? 'heart' : 'heart-outline'}
-              style={styles.tweetActionsIcons}
-            />
+          <TouchableHighlight {...tweetActionWrapperStyle} onPress={() => {}}>
+            <Ionicons name={'heart-outline'} style={styles.tweetActionsIcons} />
           </TouchableHighlight>
           <TouchableHighlight
             {...tweetActionWrapperStyle}
@@ -126,7 +73,7 @@ const Tweet = ({tweet, navigation}) => {
         </View>
       </View>
       <Ionicons name={'chevron-down-outline'} style={styles.menuAction} />
-    </Pressable>
+    </View>
   );
 };
 
@@ -141,7 +88,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     minHeight: 70,
   },
-  tweetDataContent: {},
   tweetHeader: {
     flexDirection: 'row',
   },
@@ -190,4 +136,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Tweet;
+export default CommentTweet;

@@ -22,6 +22,7 @@ function tweet(username, text) {
       body: JSON.stringify({
         user: username,
         text: text,
+        platform: Platform.OS === 'android' ? 'Android' : 'iPhone',
       }),
     }).then((response) => response.json());
   } catch (e) {
