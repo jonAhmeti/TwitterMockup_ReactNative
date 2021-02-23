@@ -4,19 +4,6 @@ import Header, {iconDefaultShape} from './Header';
 import Body from './Body';
 import Logo from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import store from '../../redux/store';
-import * as tweetActions from '../../redux/actions/tweetActions';
-
-async function getTweets() {
-  let result = await fetch('https://twitterapi.conveyor.cloud/Tweet', {
-    method: 'GET',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-  });
-  return await result.json();
-}
 
 const Main = (props) => {
   return (

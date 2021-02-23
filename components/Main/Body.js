@@ -56,6 +56,14 @@ const Body = (props) => {
     }
   }, []);
 
+  useEffect(() => {
+    const unsubscribe = props.navigation.addListener('focus', () => {
+      getTweets().then((result) => saveTweets(result));
+    });
+
+    return unsubscribe;
+  }, [props.navigation]);
+
   return (
     <View style={styles.tweetsWrapper}>
       {saving ? (
