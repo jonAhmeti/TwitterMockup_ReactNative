@@ -62,7 +62,9 @@ const WriteComment = (props) => {
                   comment(store.getState().currentUser.username, {
                     id: tweet.id,
                     comment: tweetComment,
-                  }).then((result) => console.log(result));
+                  })
+                    .then((result) => console.log(result))
+                    .then(props.navigation.goBack());
                 }
               } catch (e) {
                 console.log('Error on comment button click.', e);
