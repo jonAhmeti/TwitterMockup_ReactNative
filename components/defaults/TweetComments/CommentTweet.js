@@ -72,19 +72,16 @@ const CommentTweet = ({tweet}) => {
           </TouchableHighlight>
         </View>
       </View>
-      <Ionicons name={'chevron-down-outline'} style={styles.menuAction} />
+      <Ionicons name={'ellipsis-vertical'} style={styles.menuAction} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    borderColor: '#556872',
-    borderBottomWidth: 0.2,
     flex: 1,
     flexDirection: 'row',
     paddingHorizontal: 5,
-    paddingVertical: 10,
     marginBottom: 5,
     minHeight: 70,
   },

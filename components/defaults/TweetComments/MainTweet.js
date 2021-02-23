@@ -8,10 +8,51 @@ import {
   Share,
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import store from '../../../redux/store';
 
 const MainTweet = ({tweet}) => {
   const [likes, setLikes] = useState(tweet.likes);
   const [liked, setLiked] = useState(tweet.liked);
+
+  function like() {
+    tweet.liked = true;
+    setLikes(likes + 1);
+    try {
+      return fetch('https://twitterapi.conveyor.cloud/LikedTweet/Like', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: store.getState().currentUser.id,
+          tweetId: tweet.id,
+        }),
+      }).then((data) => data.json());
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  function unlike() {
+    tweet.liked = false;
+    setLikes(likes - 1);
+    try {
+      return fetch('https://twitterapi.conveyor.cloud/LikedTweet/Unlike', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: store.getState().currentUser.id,
+          tweetId: tweet.id,
+        }),
+      }).then((data) => data.json());
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
   const tweetDate = new Date(tweet.date);
   const tweetActionWrapperStyle = {
     activeOpacity: 1,
@@ -105,12 +146,12 @@ const MainTweet = ({tweet}) => {
           <TouchableHighlight
             {...tweetActionWrapperStyle}
             onPress={() => {
-              if (liked) {
-                setLikes(likes - 1);
+              if (liked === true) {
                 setLiked(false);
+                unlike().then((result) => console.log(result));
               } else {
-                setLikes(likes + 1);
                 setLiked(true);
+                like().then((result) => console.log(result));
               }
             }}>
             <Ionicons

@@ -12,9 +12,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import store from '../../redux/store';
 
 const Tweet = ({tweet, navigation}) => {
-  // check this out one more time .. console.log(tweet);
   const [liked, setLiked] = useState(tweet.liked);
-  console.log('isliked??', tweet.liked);
 
   function like() {
     tweet.liked = true;
@@ -82,7 +80,11 @@ const Tweet = ({tweet, navigation}) => {
         <Text style={styles.tweetText}>{tweet.text}</Text>
 
         <View style={styles.tweetActions}>
-          <TouchableHighlight {...tweetActionWrapperStyle} onPress={() => {}}>
+          <TouchableHighlight
+            {...tweetActionWrapperStyle}
+            onPress={() => {
+              navigation.navigate('WriteComment', {tweet});
+            }}>
             <Ionicons
               name={'chatbubble-outline'}
               style={styles.tweetActionsIcons}
@@ -125,7 +127,7 @@ const Tweet = ({tweet, navigation}) => {
           </TouchableHighlight>
         </View>
       </View>
-      <Ionicons name={'chevron-down-outline'} style={styles.menuAction} />
+      <Ionicons name={'ellipsis-vertical'} style={styles.menuAction} />
     </Pressable>
   );
 };

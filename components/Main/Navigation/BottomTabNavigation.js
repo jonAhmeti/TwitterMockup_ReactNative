@@ -40,6 +40,7 @@ const BottomTabNavigation = () => {
         options={{
           tabBarIcon: ({focused, color, size}) =>
             BottomTabIcon({focused, color, size, icon: 'bell'}),
+          tabBarBadge: 3,
         }}
       />
       <BottomTab.Screen

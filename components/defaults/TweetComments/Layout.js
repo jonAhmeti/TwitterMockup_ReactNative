@@ -21,7 +21,20 @@ const Layout = (props) => {
         </View>
       ),
     },
-    {data: comments, renderItem: ({item}) => <CommentTweet tweet={item} />},
+    {
+      data: comments,
+      renderItem: ({item}) => (
+        <View
+          style={{
+            paddingTop: 15,
+            paddingHorizontal: 15,
+            borderColor: '#556872',
+            borderBottomWidth: 0.2,
+          }}>
+          <CommentTweet tweet={item} />
+        </View>
+      ),
+    },
   ];
 
   function getComments() {
