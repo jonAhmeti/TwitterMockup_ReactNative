@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import {StyleSheet, SectionList, View} from 'react-native';
+import {StyleSheet, SectionList, View, ActivityIndicator} from 'react-native';
 import MainTweet from './MainTweet';
 import CommentTweet from './CommentTweet';
 
 const Layout = (props) => {
   const {tweet} = props.route.params;
   const [comments, setComments] = useState([]);
+  const [fetchingComments, setFetchingComments] = useState(false);
 
   const sections = [
     {
@@ -48,16 +49,45 @@ const Layout = (props) => {
   }
 
   useEffect(() => {
+    setFetchingComments(true);
     getComments()
-      .then((result) => setComments(result))
-      .then((result) => console.log(result));
+      .then((result) => {
+        setComments(result);
+        console.log(result);
+      })
+      .then(() => {
+        setFetchingComments(false);
+      });
   }, []);
 
-  return (
+  return fetchingComments === true ? (
+    <View style={styles.tweetsWrapper}>
+      <View
+        style={{
+          minHeight: 221,
+          paddingHorizontal: 15,
+          borderColor: '#556872',
+          borderBottomWidth: 0.2,
+        }}>
+        <MainTweet tweet={tweet} />
+      </View>
+      <View style={{flex: 1, justifyContent: 'center'}}>
+        <ActivityIndicator size={50} color={'#5dbced'} />
+      </View>
+    </View>
+  ) : (
     <View style={styles.tweetsWrapper}>
       <SectionList sections={sections} />
     </View>
   );
+
+  /*
+
+    <View style={styles.tweetsWrapper}>
+        <SectionList sections={sections} />
+    </View>
+
+  */
 };
 
 const styles = StyleSheet.create({

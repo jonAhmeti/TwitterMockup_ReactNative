@@ -61,7 +61,7 @@ const CommentTweet = ({tweet}) => {
             {...tweetActionWrapperStyle}
             onPress={() => {
               Share.share({
-                message: `Share tweet by @${tweet.user}:\n${tweet.text}`,
+                message: `Share tweet by @${tweet.user}:\n${tweet.comment}`,
                 title: 'Wannabe Title',
               });
             }}>
