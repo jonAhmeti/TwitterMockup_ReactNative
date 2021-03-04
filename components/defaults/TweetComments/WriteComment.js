@@ -9,6 +9,7 @@ import {
   Share,
   Platform,
   ToastAndroid,
+  ScrollView,
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import TwitterButton from '../TwitterButton';
@@ -39,6 +40,47 @@ function comment(username, tweet) {
 const WriteComment = (props) => {
   const [tweetComment, setTweetComment] = useState(undefined);
   const {tweet} = props.route.params;
+  const [liked, setLiked] = useState(tweet.liked);
+  const [likes, setLikes] = useState(tweet.likes);
+
+  function like() {
+    tweet.liked = true;
+    setLikes(likes + 1);
+    try {
+      return fetch('https://twitterapi.conveyor.cloud/LikedTweet/Like', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: store.getState().currentUser.id,
+          tweetId: tweet.id,
+        }),
+      }).then((data) => data.json());
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  function unlike() {
+    tweet.liked = false;
+    setLikes(likes - 1);
+    try {
+      return fetch('https://twitterapi.conveyor.cloud/LikedTweet/Unlike', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: store.getState().currentUser.id,
+          tweetId: tweet.id,
+        }),
+      }).then((data) => data.json());
+    } catch (e) {
+      console.log(e);
+    }
+  }
 
   const tweetActionWrapperStyle = {
     activeOpacity: 1,
@@ -82,7 +124,7 @@ const WriteComment = (props) => {
   }, [tweetComment]);
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.sectionWrapper}>
         <View style={styles.pictureWrapper}>
           <Image
@@ -118,8 +160,21 @@ const WriteComment = (props) => {
                 style={styles.tweetActionsIcons}
               />
             </TouchableHighlight>
-            <TouchableHighlight {...tweetActionWrapperStyle} onPress={() => {}}>
-              <Ionicons name={'heart'} style={styles.tweetActionsIcons} />
+            <TouchableHighlight
+              {...tweetActionWrapperStyle}
+              onPress={() => {
+                if (liked === true) {
+                  setLiked(false);
+                  unlike().then((result) => console.log(result));
+                } else {
+                  setLiked(true);
+                  like().then((result) => console.log(result));
+                }
+              }}>
+              <Ionicons
+                name={liked === true ? 'heart' : 'heart-outline'}
+                style={styles.tweetActionsIcons}
+              />
             </TouchableHighlight>
             <TouchableHighlight
               {...tweetActionWrapperStyle}
@@ -173,7 +228,7 @@ const WriteComment = (props) => {
           </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

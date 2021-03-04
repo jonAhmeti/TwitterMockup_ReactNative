@@ -87,7 +87,7 @@ const MainTweet = ({tweet, navigation}) => {
         />
       </View>
       <View style={styles.tweetWrapper}>
-          <Text style={styles.tweetText}>{tweet.text}</Text>
+        <Text style={styles.tweetText}>{tweet.text}</Text>
         <View style={styles.tweetDetailsWrapper}>
           <Text style={styles.tweetDate}>
             {`${

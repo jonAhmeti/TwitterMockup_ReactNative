@@ -66,7 +66,7 @@ const Layout = (props) => {
         style={{
           paddingHorizontal: 15,
         }}>
-        <MainTweet tweet={tweet} />
+        <MainTweet tweet={tweet} navigation={props.navigation} />
       </View>
       <View style={{flex: 1, justifyContent: 'center'}}>
         <ActivityIndicator size={50} color={'#5dbced'} />

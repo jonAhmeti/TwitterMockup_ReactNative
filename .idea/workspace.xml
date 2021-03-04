@@ -12,7 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d7ad72a9-e476-4985-906e-64b81963ff49" name="Default Changelist" comment="Initial Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/defaults/TweetComments/CommentTweet.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/defaults/TweetComments/CommentTweet.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/defaults/TweetComments/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/defaults/TweetComments/Layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/defaults/TweetComments/MainTweet.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/defaults/TweetComments/MainTweet.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/defaults/TweetComments/WriteComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/defaults/TweetComments/WriteComment.js" afterDir="false" />
@@ -138,7 +137,7 @@
       <workItem from="1614362229882" duration="12000" />
       <workItem from="1614799381959" duration="6000" />
       <workItem from="1614869616477" duration="957000" />
-      <workItem from="1614870707226" duration="5312000" />
+      <workItem from="1614870707226" duration="5977000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1607286947351</created>
