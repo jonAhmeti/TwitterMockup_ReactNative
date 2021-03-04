@@ -18,7 +18,7 @@ const Layout = (props) => {
             borderColor: '#556872',
             borderBottomWidth: 0.2,
           }}>
-          <MainTweet tweet={item} />
+          <MainTweet tweet={item} navigation={props.navigation} />
         </View>
       ),
     },
@@ -64,10 +64,7 @@ const Layout = (props) => {
     <View style={styles.tweetsWrapper}>
       <View
         style={{
-          minHeight: 221,
           paddingHorizontal: 15,
-          borderColor: '#556872',
-          borderBottomWidth: 0.2,
         }}>
         <MainTweet tweet={tweet} />
       </View>

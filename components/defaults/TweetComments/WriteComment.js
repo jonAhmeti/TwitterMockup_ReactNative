@@ -164,9 +164,11 @@ const WriteComment = (props) => {
             />
           </View>
           <View style={styles.userWrapper}>
-            <Text style={[styles.userFont, styles.username]}>{tweet.user}</Text>
+            <Text style={[styles.userFont, styles.username]}>
+              {store.getState().currentUser.username}
+            </Text>
             <Text style={[styles.userFont, styles.userHandle]}>
-              @{tweet.user}
+              @{store.getState().currentUser.username}
             </Text>
           </View>
         </View>

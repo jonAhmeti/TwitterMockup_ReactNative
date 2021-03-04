@@ -10,7 +10,7 @@ import {
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import store from '../../../redux/store';
 
-const MainTweet = ({tweet}) => {
+const MainTweet = ({tweet, navigation}) => {
   const [likes, setLikes] = useState(tweet.likes);
   const [liked, setLiked] = useState(tweet.liked);
 
@@ -87,7 +87,7 @@ const MainTweet = ({tweet}) => {
         />
       </View>
       <View style={styles.tweetWrapper}>
-        <Text style={styles.tweetText}>{tweet.text}</Text>
+          <Text style={styles.tweetText}>{tweet.text}</Text>
         <View style={styles.tweetDetailsWrapper}>
           <Text style={styles.tweetDate}>
             {`${
@@ -131,7 +131,11 @@ const MainTweet = ({tweet}) => {
           </View>
         </View>
         <View style={styles.tweetActions}>
-          <TouchableHighlight {...tweetActionWrapperStyle} onPress={() => {}}>
+          <TouchableHighlight
+            {...tweetActionWrapperStyle}
+            onPress={() => {
+              navigation.navigate('WriteComment', {tweet});
+            }}>
             <Ionicons
               name={'chatbubble-outline'}
               style={styles.tweetActionsIcons}
@@ -195,7 +199,6 @@ const styles = StyleSheet.create({
   },
   tweetWrapper: {
     marginTop: 10,
-    flex: 1,
   },
   tweetText: {
     color: '#fff',

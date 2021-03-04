@@ -44,12 +44,6 @@ const CommentTweet = ({tweet}) => {
         <View style={styles.tweetActions}>
           <TouchableHighlight {...tweetActionWrapperStyle} onPress={() => {}}>
             <Ionicons
-              name={'chatbubble-outline'}
-              style={styles.tweetActionsIcons}
-            />
-          </TouchableHighlight>
-          <TouchableHighlight {...tweetActionWrapperStyle} onPress={() => {}}>
-            <Ionicons
               name={'repeat-outline'}
               style={styles.tweetActionsIcons}
             />
