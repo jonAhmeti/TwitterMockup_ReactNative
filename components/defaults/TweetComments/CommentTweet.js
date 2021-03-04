@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   StyleSheet,
@@ -11,6 +11,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const CommentTweet = ({tweet}) => {
   const tweetDate = new Date(tweet.date);
+  const [liked, setLiked] = useState(false);
   const tweetActionWrapperStyle = {
     activeOpacity: 1,
     underlayColor: 'rgba(93,188,237,0.5)',
@@ -48,8 +49,22 @@ const CommentTweet = ({tweet}) => {
               style={styles.tweetActionsIcons}
             />
           </TouchableHighlight>
-          <TouchableHighlight {...tweetActionWrapperStyle} onPress={() => {}}>
-            <Ionicons name={'heart-outline'} style={styles.tweetActionsIcons} />
+          <TouchableHighlight
+            {...tweetActionWrapperStyle}
+            onPress={() => {
+              console.log(
+                "CommentTweet component doesn't have like/unlike functionality",
+              );
+              if (liked === true) {
+                setLiked(false);
+              } else {
+                setLiked(true);
+              }
+            }}>
+            <Ionicons
+              name={liked === true ? 'heart' : 'heart-outline'}
+              style={styles.tweetActionsIcons}
+            />
           </TouchableHighlight>
           <TouchableHighlight
             {...tweetActionWrapperStyle}
