@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
   StyleSheet,
   TextInput,
   ActivityIndicator,
+  AsyncStorage,
 } from 'react-native';
 import TwitterButton from '../defaults/TwitterButton';
 
@@ -18,6 +19,7 @@ const Inputs = (props) => {
   const [username, setUsername] = useState(undefined);
   const [password, setPassword] = useState(undefined);
   const [fetching, setFetching] = useState(false);
+  const [suggestedUser, setSuggestedUser] = useState(null);
 
   async function login() {
     props.route.params?.email
@@ -78,9 +80,41 @@ const Inputs = (props) => {
     setPasswordFocus(false);
     setIsFocused(undefined);
   }
+  async function saveUserSuggestion() {
+    try {
+      await AsyncStorage.setItem('loginUser', username);
+    } catch (e) {
+      console.log('Error: saveUserSuggestion()', e);
+    }
+  }
+  async function getUserSuggestion() {
+    try {
+      return await AsyncStorage.getItem('loginUser');
+    } catch (e) {
+      console.log('Error: getUserSuggestion()', e);
+    }
+  }
+
+  useEffect(() => {
+    getUserSuggestion().then((res) => {
+      setSuggestedUser(res);
+      console.log(res);
+    });
+  }, []);
 
   return (
     <View style={styles.container}>
+      {suggestedUser !== null ? (
+        <View style={styles.suggestionWrapper}>
+          <Text style={{color: '#fff'}}>Login as</Text>
+          <Text
+            onPress={() => setUsername(suggestedUser)}
+            style={stylesFocused.label}>
+            {'  '}
+            {'@' + suggestedUser}
+          </Text>
+        </View>
+      ) : null}
       <View
         style={[
           styles.inputWrapper,
@@ -94,7 +128,7 @@ const Inputs = (props) => {
           onFocus={() => onInputFocus('username')}
           onBlur={() => onInputBlur()}
           style={styles.input}
-          defaultValue={props.route.params?.email}
+          defaultValue={props.route.params?.email || username}
           onChangeText={(text) => setUsername(text)}
         />
       </View>
@@ -124,7 +158,16 @@ const Inputs = (props) => {
         />
       ) : (
         <View style={styles.button}>
-          <TwitterButton text={'Log in'} onPress={() => login()} />
+          <TwitterButton
+            text={'Log in'}
+            onPress={() => {
+              login().then(() => {
+                saveUserSuggestion().then(
+                  getUserSuggestion().then((res) => setSuggestedUser(res)),
+                );
+              });
+            }}
+          />
         </View>
       )}
     </View>
@@ -154,6 +197,11 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 30,
+  },
+  suggestionWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    padding: 5,
   },
 });
 
