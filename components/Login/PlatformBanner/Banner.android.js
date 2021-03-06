@@ -1,19 +1,58 @@
-import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import React, {useRef, useEffect} from 'react';
+import {StyleSheet, Text, View, Animated} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Banner = () => {
+  const fadeAnim = useRef(new Animated.Value(0)).current;
+  const fade = () => {
+    Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 1300,
+      useNativeDriver: true,
+    }).start(() => {
+      Animated.timing(fadeAnim, {
+        toValue: 0,
+        duration: 300,
+        useNativeDriver: true,
+      }).start(() => {
+        Animated.timing(fadeAnim, {
+          toValue: 1,
+          duration: 100,
+          useNativeDriver: true,
+        }).start(() => {
+          Animated.timing(fadeAnim, {
+            toValue: 0,
+            duration: 100,
+            useNativeDriver: true,
+          }).start(() => {
+            Animated.timing(fadeAnim, {
+              toValue: 1,
+              duration: 100,
+              useNativeDriver: true,
+            }).start();
+          });
+        });
+      });
+    });
+  };
+
+  useEffect(() => {
+    fade();
+  }, []);
+
   return (
     <View>
       <View style={styles.twitterFor}>
         <Text style={[styles.textStyle, styles.twitter]}>Twitter </Text>
         <Text style={[styles.textStyle, styles.platform]}>for Android. </Text>
-        <Icon
-          style={styles.logo}
-          name={'android'}
-          size={50}
-          color={'rgba(93, 188, 237, 1)'}
-        />
+        <Animated.View style={{opacity: fadeAnim}}>
+          <Icon
+            style={styles.logo}
+            name={'android'}
+            size={50}
+            color={'rgba(93, 188, 237, 1)'}
+          />
+        </Animated.View>
       </View>
     </View>
   );
